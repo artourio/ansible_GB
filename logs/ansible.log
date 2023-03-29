@@ -1,6 +1,6 @@
-2023-03-27 16:19:14,081 p=16938 u=arthur n=ansible | [WARNING]:  * Failed to parse /home/arthur/repos/ansible_GB/inventory/hosts.yml with auto plugin: no root 'plugin' key found,
-'/home/arthur/repos/ansible_GB/inventory/hosts.yml' is not a valid YAML inventory plugin config file
 
+<<<<<<< HEAD
+=======
 2023-03-27 16:19:14,082 p=16938 u=arthur n=ansible | [WARNING]:  * Failed to parse /home/arthur/repos/ansible_GB/inventory/hosts.yml with yaml plugin: Invalid "hosts" entry for "myservs"
 group, requires a dictionary, found "<class 'ansible.parsing.yaml.objects.AnsibleSequence'>" instead.
 
@@ -164,3 +164,781 @@ elsewhere in the file depending on the exact syntax problem.  The offending line
     "changed": false,
     "ping": "pong"
 }
+2023-03-28 19:29:36,374 p=4789 u=arthur n=ansible | 10.10.10.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-03-28 19:29:36,423 p=4789 u=arthur n=ansible | 10.10.10.2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-03-28 19:43:47,037 p=5501 u=arthur n=ansible | ERROR! the playbook: myservs could not be found
+2023-03-28 19:44:47,015 p=5508 u=arthur n=ansible | ERROR! the playbook: deploy-nginx.yml could not be found
+2023-03-28 19:46:33,877 p=5527 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-03-28 19:46:33,901 p=5527 u=arthur n=ansible | PLAY [Install NGINX] ***********************************************************************************************************************
+2023-03-28 19:46:33,997 p=5527 u=arthur n=ansible | [WARNING]: Collection nginxinc.nginx_core does not support Ansible version 2.10.8
+
+2023-03-28 19:46:34,005 p=5527 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-03-28 19:46:41,724 p=5527 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 19:46:42,098 p=5527 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 19:46:42,128 p=5527 u=arthur n=ansible | TASK [Install NGINX] ***********************************************************************************************************************
+2023-03-28 19:46:42,294 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Validate distribution and role variables] ****************************************************************
+2023-03-28 19:46:42,429 p=5527 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/validate/validate.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 19:46:42,445 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Check whether you are using a supported NGINX distribution] **********************************************
+2023-03-28 19:46:42,875 p=5527 u=arthur n=ansible | ok: [10.10.10.2] => changed=false 
+  msg: Your distribution, Ubuntu 22.04 (x86_64), is supported by NGINX Open Source.
+2023-03-28 19:46:42,924 p=5527 u=arthur n=ansible | ok: [10.10.10.1] => changed=false 
+  msg: Your distribution, Ubuntu 22.04 (x86_64), is supported by NGINX Open Source.
+2023-03-28 19:46:42,941 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Check that 'nginx_setup' is an allowed value] ************************************************************
+2023-03-28 19:46:43,035 p=5527 u=arthur n=ansible | ok: [10.10.10.1] => changed=false 
+  msg: All assertions passed
+2023-03-28 19:46:43,083 p=5527 u=arthur n=ansible | ok: [10.10.10.2] => changed=false 
+  msg: All assertions passed
+2023-03-28 19:46:43,100 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Check that 'nginx_branch' is an allowed value] ***********************************************************
+2023-03-28 19:46:43,208 p=5527 u=arthur n=ansible | ok: [10.10.10.1] => changed=false 
+  msg: All assertions passed
+2023-03-28 19:46:43,256 p=5527 u=arthur n=ansible | ok: [10.10.10.2] => changed=false 
+  msg: All assertions passed
+2023-03-28 19:46:43,279 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Check that 'nginx_install_from' is an allowed value] *****************************************************
+2023-03-28 19:46:43,368 p=5527 u=arthur n=ansible | ok: [10.10.10.1] => changed=false 
+  msg: All assertions passed
+2023-03-28 19:46:43,397 p=5527 u=arthur n=ansible | ok: [10.10.10.2] => changed=false 
+  msg: All assertions passed
+2023-03-28 19:46:43,423 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Set up prerequisites] ************************************************************************************
+2023-03-28 19:46:43,551 p=5527 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/prerequisites/prerequisites.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 19:46:43,574 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install dependencies] ************************************************************************************
+2023-03-28 19:46:43,744 p=5527 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/prerequisites/install-dependencies.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 19:46:43,758 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Alpine Linux) Install dependencies] *********************************************************************
+2023-03-28 19:46:43,816 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:46:43,843 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:46:43,864 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Ubuntu) Install dependencies] ********************************************************************
+2023-03-28 19:47:14,727 p=5527 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 19:47:28,323 p=5527 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 19:47:28,375 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Amazon Linux/CentOS/Oracle Linux/RHEL) Install dependencies] ********************************************
+2023-03-28 19:47:28,448 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:47:28,474 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:47:28,521 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (SLES) Install dependencies] *****************************************************************************
+2023-03-28 19:47:28,589 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:47:28,655 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:47:28,687 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (FreeBSD) Install dependencies using package(s)] *********************************************************
+2023-03-28 19:47:28,757 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:47:28,788 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:47:28,816 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (FreeBSD) Install dependencies using port(s)] ************************************************************
+2023-03-28 19:47:28,914 p=5527 u=arthur n=ansible | skipping: [10.10.10.1] => (item=security/ca_root_nss) 
+2023-03-28 19:47:28,918 p=5527 u=arthur n=ansible | skipping: [10.10.10.2] => (item=security/ca_root_nss) 
+2023-03-28 19:47:28,971 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Check if SELinux is enabled] *****************************************************************************
+2023-03-28 19:47:29,047 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:47:29,083 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:47:29,102 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Configure SELinux] ***************************************************************************************
+2023-03-28 19:47:29,192 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:47:29,213 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:47:29,243 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Set up signing keys] *************************************************************************************
+2023-03-28 19:47:29,397 p=5527 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/keys/setup-keys.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 19:47:29,443 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Alpine Linux) Set up NGINX signing key URL] *************************************************************
+2023-03-28 19:47:29,517 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:47:29,548 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:47:29,591 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Alpine Linux) Download NGINX signing key] ***************************************************************
+2023-03-28 19:47:29,674 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:47:29,734 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:47:29,758 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Red Hat/SLES OSs) Set up NGINX signing key URL] **************************************************
+2023-03-28 19:47:29,835 p=5527 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 19:47:29,890 p=5527 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 19:47:29,911 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Ubuntu) Add NGINX signing key] *******************************************************************
+2023-03-28 19:47:35,281 p=5527 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 19:47:35,364 p=5527 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 19:47:35,379 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Red Hat/SLES OSs) Add NGINX signing key] ****************************************************************
+2023-03-28 19:47:35,454 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:47:35,458 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:47:35,481 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX Open Source] *******************************************************************************
+2023-03-28 19:47:35,603 p=5527 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/opensource/install-oss.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 19:47:35,628 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX from the official package repository] ******************************************************
+2023-03-28 19:47:35,778 p=5527 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/opensource/install-debian.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 19:47:35,800 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Ubuntu) Configure NGINX repository] **************************************************************
+2023-03-28 19:47:52,680 p=5527 u=arthur n=ansible | changed: [10.10.10.2] => (item=deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu/ jammy nginx)
+2023-03-28 19:48:06,204 p=5527 u=arthur n=ansible | changed: [10.10.10.2] => (item=deb-src [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu/ jammy nginx)
+2023-03-28 19:48:07,071 p=5527 u=arthur n=ansible | changed: [10.10.10.1] => (item=deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu/ jammy nginx)
+2023-03-28 19:48:26,601 p=5527 u=arthur n=ansible | changed: [10.10.10.1] => (item=deb-src [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu/ jammy nginx)
+2023-03-28 19:48:26,632 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Ubuntu) Pin NGINX repository] ********************************************************************
+2023-03-28 19:48:28,950 p=5527 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 19:48:29,489 p=5527 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 19:48:29,518 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Ubuntu) Install NGINX] ***************************************************************************
+2023-03-28 19:49:01,298 p=5527 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 19:49:08,645 p=5527 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 19:49:08,689 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX from the distribution's package repository] ************************************************
+2023-03-28 19:49:08,817 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:08,819 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:08,842 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX from source] *******************************************************************************
+2023-03-28 19:49:08,909 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:08,944 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:08,965 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX in Unix systems] ***************************************************************************
+2023-03-28 19:49:09,031 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:09,064 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:09,086 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Set up NGINX Plus license] *******************************************************************************
+2023-03-28 19:49:09,136 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:09,164 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:09,207 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX Plus] **************************************************************************************
+2023-03-28 19:49:09,264 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:09,291 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:09,311 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX dynamic modules] ***************************************************************************
+2023-03-28 19:49:09,366 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:09,427 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:09,441 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Remove NGINX Plus license] *******************************************************************************
+2023-03-28 19:49:09,493 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:09,524 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:09,541 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Modify systemd parameters] *******************************************************************************
+2023-03-28 19:49:09,613 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:09,641 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:09,663 p=5527 u=arthur n=ansible | RUNNING HANDLER [nginxinc.nginx_core.nginx : (Handler) Start/reload NGINX] *****************************************************************
+2023-03-28 19:49:12,940 p=5527 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 19:49:13,175 p=5527 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 19:49:13,176 p=5527 u=arthur n=ansible | RUNNING HANDLER [nginxinc.nginx_core.nginx : (Handler) Check NGINX] ************************************************************************
+2023-03-28 19:49:15,051 p=5527 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 19:49:15,239 p=5527 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 19:49:15,240 p=5527 u=arthur n=ansible | RUNNING HANDLER [nginxinc.nginx_core.nginx : (Handler) Print NGINX error if syntax check fails] ********************************************
+2023-03-28 19:49:15,319 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:15,330 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:15,354 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Debug NGINX output] **************************************************************************************
+2023-03-28 19:49:15,416 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:15,450 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:15,467 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Configure logrotate for NGINX] ***************************************************************************
+2023-03-28 19:49:15,515 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:15,535 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:15,550 p=5527 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX Amplify] ***********************************************************************************
+2023-03-28 19:49:15,604 p=5527 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 19:49:15,627 p=5527 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 19:49:15,671 p=5527 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-03-28 19:49:15,672 p=5527 u=arthur n=ansible | 10.10.10.1                 : ok=19   changed=6    unreachable=0    failed=0    skipped=22   rescued=0    ignored=0   
+2023-03-28 19:49:15,672 p=5527 u=arthur n=ansible | 10.10.10.2                 : ok=19   changed=6    unreachable=0    failed=0    skipped=22   rescued=0    ignored=0   
+2023-03-28 19:52:08,385 p=6038 u=arthur n=ansible | Starting galaxy collection install process
+2023-03-28 19:52:08,467 p=6038 u=arthur n=ansible | Process install dependency map
+2023-03-28 19:52:08,468 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:08,568 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:08,669 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:08,769 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:08,870 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:08,971 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:09,071 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:09,172 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:09,272 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:09,373 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:09,473 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:09,574 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:09,674 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:09,775 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:09,875 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:09,976 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:10,077 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:10,177 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:10,278 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:10,378 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:10,479 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:10,579 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:10,680 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:10,780 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:10,881 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:10,982 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:11,082 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:11,183 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:11,283 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:11,384 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:11,484 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:11,585 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:11,685 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:11,786 p=6038 u=arthur n=ansible | Starting collection install process
+2023-03-28 19:52:11,787 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:11,887 p=6038 u=arthur n=ansible | Installing 'community.mysql:3.6.0' to '/home/arthur/.ansible/collections/ansible_collections/community/mysql'
+2023-03-28 19:52:11,887 p=6038 u=arthur n=ansible | Downloading https://galaxy.ansible.com/download/community-mysql-3.6.0.tar.gz to /home/arthur/.ansible/tmp/ansible-local-6038a0gkuhii/tmprkdsv61_
+2023-03-28 19:52:11,887 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:11,988 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:12,088 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:12,189 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:12,289 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:12,390 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:12,490 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:12,591 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:12,691 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:12,792 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:12,893 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:12,993 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:13,094 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:13,194 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:13,295 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:13,395 p=6038 u=arthur n=ansible | |
+2023-03-28 19:52:13,496 p=6038 u=arthur n=ansible | /
+2023-03-28 19:52:13,596 p=6038 u=arthur n=ansible | -
+2023-03-28 19:52:13,697 p=6038 u=arthur n=ansible | \
+2023-03-28 19:52:13,798 p=6038 u=arthur n=ansible | community.mysql (3.6.0) was installed successfully
+2023-03-28 19:55:41,710 p=6055 u=arthur n=ansible | Starting galaxy collection install process
+2023-03-28 19:55:41,748 p=6055 u=arthur n=ansible | Process install dependency map
+2023-03-28 19:55:41,749 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:41,849 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:41,950 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:42,050 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:42,151 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:42,252 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:42,352 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:42,453 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:42,553 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:42,653 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:42,754 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:42,855 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:42,955 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:43,056 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:43,156 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:43,257 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:43,357 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:43,458 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:43,558 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:43,659 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:43,760 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:43,860 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:43,961 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:44,061 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:44,162 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:44,262 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:44,363 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:44,463 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:44,564 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:44,664 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:44,765 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:44,865 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:44,966 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:45,067 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:45,167 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:45,268 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:45,368 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:45,469 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:45,569 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:45,670 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:45,770 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:45,871 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:45,971 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:46,072 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:46,172 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:46,273 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:46,373 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:46,474 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:46,574 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:46,675 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:46,775 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:46,876 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:46,976 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:47,077 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:47,177 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:47,278 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:47,378 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:47,479 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:47,579 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:47,680 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:47,780 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:47,881 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:47,981 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:48,082 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:48,182 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:48,283 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:48,383 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:48,484 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:48,585 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:48,685 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:48,786 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:48,886 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:48,987 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:49,087 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:49,187 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:49,288 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:49,388 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:49,489 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:49,590 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:49,690 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:49,790 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:49,891 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:49,991 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:50,092 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:50,192 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:50,293 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:50,393 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:50,494 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:50,594 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:50,695 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:50,795 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:50,896 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:50,996 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:51,097 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:51,197 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:51,298 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:51,398 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:51,499 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:51,599 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:51,700 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:51,800 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:51,901 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:52,002 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:52,102 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:52,203 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:52,303 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:52,403 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:52,504 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:52,604 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:52,705 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:52,805 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:52,906 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:53,006 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:53,107 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:53,207 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:53,308 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:53,408 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:53,509 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:53,610 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:53,710 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:53,811 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:53,911 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:54,012 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:54,112 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:54,213 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:54,313 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:54,413 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:54,514 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:54,614 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:54,715 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:54,815 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:54,916 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:55,016 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:55,117 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:55,217 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:55,318 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:55,418 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:55,519 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:55,619 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:55,720 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:55,821 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:55,921 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:56,022 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:56,122 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:56,223 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:56,323 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:56,424 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:56,524 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:56,625 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:56,726 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:56,826 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:56,927 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:57,027 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:57,128 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:57,228 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:57,329 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:57,429 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:57,530 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:57,630 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:57,731 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:57,831 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:57,932 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:58,033 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:58,133 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:58,234 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:58,334 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:58,434 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:58,535 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:58,635 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:58,736 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:58,837 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:58,937 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:59,038 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:59,138 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:59,239 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:59,339 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:59,440 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:59,540 p=6055 u=arthur n=ansible | /
+2023-03-28 19:55:59,641 p=6055 u=arthur n=ansible | -
+2023-03-28 19:55:59,741 p=6055 u=arthur n=ansible | \
+2023-03-28 19:55:59,842 p=6055 u=arthur n=ansible | |
+2023-03-28 19:55:59,942 p=6055 u=arthur n=ansible | /
+2023-03-28 19:56:00,043 p=6055 u=arthur n=ansible | Starting collection install process
+2023-03-28 19:56:00,044 p=6055 u=arthur n=ansible | |
+2023-03-28 19:56:00,144 p=6055 u=arthur n=ansible | Installing 'geerlingguy.php_roles:2.0.0' to '/home/arthur/.ansible/collections/ansible_collections/geerlingguy/php_roles'
+2023-03-28 19:56:00,144 p=6055 u=arthur n=ansible | Downloading https://galaxy.ansible.com/download/geerlingguy-php_roles-2.0.0.tar.gz to /home/arthur/.ansible/tmp/ansible-local-60555sr1_yyo/tmphd4aqm1m
+2023-03-28 19:56:00,145 p=6055 u=arthur n=ansible | /
+2023-03-28 19:56:00,245 p=6055 u=arthur n=ansible | -
+2023-03-28 19:56:00,346 p=6055 u=arthur n=ansible | \
+2023-03-28 19:56:00,446 p=6055 u=arthur n=ansible | |
+2023-03-28 19:56:00,547 p=6055 u=arthur n=ansible | /
+2023-03-28 19:56:00,647 p=6055 u=arthur n=ansible | -
+2023-03-28 19:56:00,748 p=6055 u=arthur n=ansible | \
+2023-03-28 19:56:00,848 p=6055 u=arthur n=ansible | |
+2023-03-28 19:56:00,949 p=6055 u=arthur n=ansible | /
+2023-03-28 19:56:01,049 p=6055 u=arthur n=ansible | -
+2023-03-28 19:56:01,150 p=6055 u=arthur n=ansible | \
+2023-03-28 19:56:01,251 p=6055 u=arthur n=ansible | geerlingguy.php_roles (2.0.0) was installed successfully
+2023-03-28 19:56:01,251 p=6055 u=arthur n=ansible | Skipping 'community.general' as it is already installed
+2023-03-28 20:53:53,237 p=8706 u=arthur n=ansible | ERROR! the role 'geerlingguy.php' was not found in geerlingguy.php_roles:ansible.legacy:/home/arthur/repos/ansible_GB/playbook/roles:/home/arthur/repos/ansible_GB/roles:/home/arthur/repos/ansible_GB/playbook
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-php.yml': line 8, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - geerlingguy.php
+      ^ here
+
+2023-03-28 20:54:50,011 p=8713 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-03-28 20:54:50,045 p=8713 u=arthur n=ansible | PLAY [Install NGINX] ***********************************************************************************************************************
+2023-03-28 20:54:50,131 p=8713 u=arthur n=ansible | [WARNING]: Collection nginxinc.nginx_core does not support Ansible version 2.10.8
+
+2023-03-28 20:54:50,139 p=8713 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-03-28 20:54:57,607 p=8713 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 20:54:58,084 p=8713 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 20:54:58,112 p=8713 u=arthur n=ansible | TASK [Install NGINX] ***********************************************************************************************************************
+2023-03-28 20:54:58,271 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Validate distribution and role variables] ****************************************************************
+2023-03-28 20:54:58,397 p=8713 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/validate/validate.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 20:54:58,421 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Check whether you are using a supported NGINX distribution] **********************************************
+2023-03-28 20:54:59,002 p=8713 u=arthur n=ansible | ok: [10.10.10.1] => changed=false 
+  msg: Your distribution, Ubuntu 22.04 (x86_64), is supported by NGINX Open Source.
+2023-03-28 20:54:59,081 p=8713 u=arthur n=ansible | ok: [10.10.10.2] => changed=false 
+  msg: Your distribution, Ubuntu 22.04 (x86_64), is supported by NGINX Open Source.
+2023-03-28 20:54:59,094 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Check that 'nginx_setup' is an allowed value] ************************************************************
+2023-03-28 20:54:59,213 p=8713 u=arthur n=ansible | ok: [10.10.10.2] => changed=false 
+  msg: All assertions passed
+2023-03-28 20:54:59,222 p=8713 u=arthur n=ansible | ok: [10.10.10.1] => changed=false 
+  msg: All assertions passed
+2023-03-28 20:54:59,250 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Check that 'nginx_branch' is an allowed value] ***********************************************************
+2023-03-28 20:54:59,336 p=8713 u=arthur n=ansible | ok: [10.10.10.1] => changed=false 
+  msg: All assertions passed
+2023-03-28 20:54:59,394 p=8713 u=arthur n=ansible | ok: [10.10.10.2] => changed=false 
+  msg: All assertions passed
+2023-03-28 20:54:59,420 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Check that 'nginx_install_from' is an allowed value] *****************************************************
+2023-03-28 20:54:59,541 p=8713 u=arthur n=ansible | ok: [10.10.10.2] => changed=false 
+  msg: All assertions passed
+2023-03-28 20:54:59,578 p=8713 u=arthur n=ansible | ok: [10.10.10.1] => changed=false 
+  msg: All assertions passed
+2023-03-28 20:54:59,607 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Set up prerequisites] ************************************************************************************
+2023-03-28 20:54:59,801 p=8713 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/prerequisites/prerequisites.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 20:54:59,824 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install dependencies] ************************************************************************************
+2023-03-28 20:55:00,031 p=8713 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/prerequisites/install-dependencies.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 20:55:00,050 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Alpine Linux) Install dependencies] *********************************************************************
+2023-03-28 20:55:00,102 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:00,128 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:00,145 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Ubuntu) Install dependencies] ********************************************************************
+2023-03-28 20:55:18,774 p=8713 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 20:55:18,910 p=8713 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 20:55:18,933 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Amazon Linux/CentOS/Oracle Linux/RHEL) Install dependencies] ********************************************
+2023-03-28 20:55:19,001 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:19,031 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:19,059 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (SLES) Install dependencies] *****************************************************************************
+2023-03-28 20:55:19,159 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:19,180 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:19,231 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (FreeBSD) Install dependencies using package(s)] *********************************************************
+2023-03-28 20:55:19,304 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:19,341 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:19,357 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (FreeBSD) Install dependencies using port(s)] ************************************************************
+2023-03-28 20:55:19,423 p=8713 u=arthur n=ansible | skipping: [10.10.10.1] => (item=security/ca_root_nss) 
+2023-03-28 20:55:19,472 p=8713 u=arthur n=ansible | skipping: [10.10.10.2] => (item=security/ca_root_nss) 
+2023-03-28 20:55:19,493 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Check if SELinux is enabled] *****************************************************************************
+2023-03-28 20:55:19,544 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:19,567 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:19,594 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Configure SELinux] ***************************************************************************************
+2023-03-28 20:55:19,664 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:19,669 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:19,691 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Set up signing keys] *************************************************************************************
+2023-03-28 20:55:19,810 p=8713 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/keys/setup-keys.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 20:55:19,843 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Alpine Linux) Set up NGINX signing key URL] *************************************************************
+2023-03-28 20:55:19,901 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:19,938 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:19,959 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Alpine Linux) Download NGINX signing key] ***************************************************************
+2023-03-28 20:55:20,009 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:20,036 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:20,057 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Red Hat/SLES OSs) Set up NGINX signing key URL] **************************************************
+2023-03-28 20:55:20,124 p=8713 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 20:55:20,177 p=8713 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 20:55:20,211 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Ubuntu) Add NGINX signing key] *******************************************************************
+2023-03-28 20:55:23,683 p=8713 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 20:55:23,744 p=8713 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 20:55:23,758 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Red Hat/SLES OSs) Add NGINX signing key] ****************************************************************
+2023-03-28 20:55:23,841 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:23,851 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:23,891 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX Open Source] *******************************************************************************
+2023-03-28 20:55:24,011 p=8713 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/opensource/install-oss.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 20:55:24,034 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX from the official package repository] ******************************************************
+2023-03-28 20:55:24,159 p=8713 u=arthur n=ansible | included: /home/arthur/.ansible/collections/ansible_collections/nginxinc/nginx_core/roles/nginx/tasks/opensource/install-debian.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 20:55:24,182 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Ubuntu) Configure NGINX repository] **************************************************************
+2023-03-28 20:55:27,188 p=8713 u=arthur n=ansible | ok: [10.10.10.1] => (item=deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu/ jammy nginx)
+2023-03-28 20:55:27,305 p=8713 u=arthur n=ansible | ok: [10.10.10.2] => (item=deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu/ jammy nginx)
+2023-03-28 20:55:29,512 p=8713 u=arthur n=ansible | ok: [10.10.10.2] => (item=deb-src [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu/ jammy nginx)
+2023-03-28 20:55:29,704 p=8713 u=arthur n=ansible | ok: [10.10.10.1] => (item=deb-src [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu/ jammy nginx)
+2023-03-28 20:55:29,735 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Ubuntu) Pin NGINX repository] ********************************************************************
+2023-03-28 20:55:31,502 p=8713 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 20:55:31,582 p=8713 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 20:55:31,602 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : (Debian/Ubuntu) Install NGINX] ***************************************************************************
+2023-03-28 20:55:43,447 p=8713 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 20:55:43,784 p=8713 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 20:55:43,810 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX from the distribution's package repository] ************************************************
+2023-03-28 20:55:43,915 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:43,924 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:43,973 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX from source] *******************************************************************************
+2023-03-28 20:55:44,037 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:44,063 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:44,089 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX in Unix systems] ***************************************************************************
+2023-03-28 20:55:44,152 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:44,194 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:44,217 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Set up NGINX Plus license] *******************************************************************************
+2023-03-28 20:55:44,273 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:44,305 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:44,329 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX Plus] **************************************************************************************
+2023-03-28 20:55:44,393 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:44,452 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:44,481 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX dynamic modules] ***************************************************************************
+2023-03-28 20:55:44,535 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:44,597 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:44,612 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Remove NGINX Plus license] *******************************************************************************
+2023-03-28 20:55:44,687 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:44,695 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:44,711 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Modify systemd parameters] *******************************************************************************
+2023-03-28 20:55:44,803 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:44,823 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:44,857 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Debug NGINX output] **************************************************************************************
+2023-03-28 20:55:44,928 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:44,954 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:44,987 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Configure logrotate for NGINX] ***************************************************************************
+2023-03-28 20:55:45,039 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:45,065 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:45,082 p=8713 u=arthur n=ansible | TASK [nginxinc.nginx_core.nginx : Install NGINX Amplify] ***********************************************************************************
+2023-03-28 20:55:45,140 p=8713 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 20:55:45,164 p=8713 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 20:55:45,205 p=8713 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-03-28 20:55:45,206 p=8713 u=arthur n=ansible | 10.10.10.1                 : ok=17   changed=0    unreachable=0    failed=0    skipped=21   rescued=0    ignored=0   
+2023-03-28 20:55:45,206 p=8713 u=arthur n=ansible | 10.10.10.2                 : ok=17   changed=0    unreachable=0    failed=0    skipped=21   rescued=0    ignored=0   
+2023-03-28 21:08:28,072 p=9511 u=arthur n=ansible | Starting galaxy role install process
+2023-03-28 21:08:30,695 p=9511 u=arthur n=ansible | - downloading role 'php', owned by geerlingguy
+2023-03-28 21:08:32,026 p=9511 u=arthur n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-php/archive/4.8.0.tar.gz
+2023-03-28 21:08:33,023 p=9511 u=arthur n=ansible | - extracting geerlingguy.php to /home/arthur/repos/ansible_GB/roles/geerlingguy.php
+2023-03-28 21:08:33,033 p=9511 u=arthur n=ansible | - geerlingguy.php (4.8.0) was installed successfully
+2023-03-28 21:41:12,967 p=10161 u=arthur n=ansible | 10.10.10.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-03-28 21:41:13,284 p=10161 u=arthur n=ansible | 10.10.10.2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-03-28 21:41:36,799 p=10194 u=arthur n=ansible | ERROR! vars file vars/wordpress.yml was not found
+Could not find file on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-03-28 21:43:07,980 p=10264 u=arthur n=ansible | ERROR! vars file vars/wordpress.yml was not found
+Could not find file on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-03-28 21:45:06,466 p=10328 u=arthur n=ansible | ERROR! vars file /home/repos/ansible_GB/vars/wordpress.yml was not found
+Could not find file on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-03-28 21:46:10,456 p=10339 u=arthur n=ansible | ERROR! vars file /home/repos/ansible_GB/vars/wordpress.yml was not found
+Could not find file on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-03-28 21:51:53,357 p=10486 u=arthur n=ansible | ERROR! vars file ./vars/wordpress.yml was not found
+Could not find file on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-03-28 21:53:43,675 p=10516 u=arthur n=ansible | ERROR! vars file vars/wordpress.yml was not found
+Could not find file on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-03-28 21:56:54,768 p=10643 u=arthur n=ansible | ERROR! vars file vars/wordpress.yml was not found
+Could not find file on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-03-28 21:57:54,911 p=10676 u=arthur n=ansible | ERROR! the role 'community.mysql' was not found in /home/arthur/repos/ansible_GB/playbook/roles:/home/arthur/repos/ansible_GB/roles:/home/arthur/repos/ansible_GB/playbook
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-WP_php_DB.yml': line 9, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - geerlingguy.php
+    - community.mysql
+      ^ here
+
+2023-03-28 22:00:53,205 p=10711 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-03-28 22:00:53,259 p=10711 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-03-28 22:00:53,326 p=10711 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-03-28 22:01:02,047 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:01:02,727 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:01:02,782 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Include OS-specific variables.] ************************************************************************************
+2023-03-28 22:01:02,908 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:01:02,911 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:01:02,926 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Include distribution and version-specific vars.] *******************************************************************
+2023-03-28 22:01:03,071 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Set the default PHP version for Debian-based OSes.] ****************************************************************
+2023-03-28 22:01:03,198 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:01:03,215 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:01:03,230 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_packages.] **********************************************************************************************
+2023-03-28 22:01:03,312 p=10711 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 22:01:03,337 p=10711 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 22:01:03,361 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_webserver_daemon.] **************************************************************************************
+2023-03-28 22:01:03,430 p=10711 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 22:01:03,467 p=10711 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 22:01:03,484 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_conf_paths.] ********************************************************************************************
+2023-03-28 22:01:03,568 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:01:03,613 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:01:03,626 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_extension_conf_paths.] **********************************************************************************
+2023-03-28 22:01:03,733 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:01:03,754 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:01:03,785 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_apc_conf_filename.] *************************************************************************************
+2023-03-28 22:01:03,871 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:01:03,884 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:01:03,904 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_opcache_conf_filename (Ubuntu 16.04).] ******************************************************************
+2023-03-28 22:01:03,992 p=10711 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 22:01:03,998 p=10711 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 22:01:04,014 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_opcache_conf_filename.] *********************************************************************************
+2023-03-28 22:01:04,078 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:01:04,137 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:01:04,152 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_fpm_conf_path.] *****************************************************************************************
+2023-03-28 22:01:04,256 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:01:04,280 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:01:04,303 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-03-28 22:01:04,380 p=10711 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 22:01:04,424 p=10711 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 22:01:04,439 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-03-28 22:01:04,561 p=10711 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/geerlingguy.php/tasks/setup-Debian.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 22:01:04,582 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Update apt cache.] *************************************************************************************************
+2023-03-28 22:01:07,841 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:01:08,171 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:01:08,185 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Ensure PHP packages are installed.] ********************************************************************************
+2023-03-28 22:05:44,504 p=10711 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 22:05:46,303 p=10711 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 22:05:46,327 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Delete APCu configuration file if this role will provide one.] *****************************************************
+2023-03-28 22:05:48,455 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:05:48,531 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:05:49,807 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:05:49,943 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:05:51,306 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:05:51,375 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:05:51,391 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Delete OpCache configuration file if this role will provide one.] **************************************************
+2023-03-28 22:05:52,757 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:05:52,964 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:05:54,260 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:05:54,327 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:05:55,776 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:05:55,981 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:05:55,996 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-03-28 22:05:56,082 p=10711 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 22:05:56,119 p=10711 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 22:05:56,142 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-03-28 22:05:56,236 p=10711 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/geerlingguy.php/tasks/configure.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 22:05:56,263 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Ensure configuration directories exist.] ***************************************************************************
+2023-03-28 22:05:57,753 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/fpm)
+2023-03-28 22:05:58,267 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/fpm)
+2023-03-28 22:05:59,123 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/apache2)
+2023-03-28 22:05:59,679 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/apache2)
+2023-03-28 22:06:00,839 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/cli)
+2023-03-28 22:06:01,317 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/cli)
+2023-03-28 22:06:02,339 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:06:02,593 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:06:03,829 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:06:04,184 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:06:05,248 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:06:05,561 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:06:05,590 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Place PHP configuration file in place.] ****************************************************************************
+2023-03-28 22:06:08,943 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/fpm)
+2023-03-28 22:06:09,001 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/fpm)
+2023-03-28 22:06:11,940 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/apache2)
+2023-03-28 22:06:12,029 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/apache2)
+2023-03-28 22:06:14,771 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/cli)
+2023-03-28 22:06:14,944 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/cli)
+2023-03-28 22:06:14,958 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-03-28 22:06:15,030 p=10711 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/geerlingguy.php/tasks/configure-apcu.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 22:06:15,054 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Check for existing APCu config files.] *****************************************************************************
+2023-03-28 22:06:16,660 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:06:16,811 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:06:18,008 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:06:18,235 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:06:19,542 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:06:19,566 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:06:19,581 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Remove any non-role-supplied APCu config files.] *******************************************************************
+2023-03-28 22:06:19,693 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Ensure APCu config file is present.] *******************************************************************************
+2023-03-28 22:06:22,410 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:06:22,490 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:06:24,835 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:06:25,516 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:06:27,830 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:06:28,846 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:06:28,864 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Remove APCu config file if APC is disabled.] ***********************************************************************
+2023-03-28 22:06:28,994 p=10711 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-03-28 22:06:28,995 p=10711 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-03-28 22:06:28,996 p=10711 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-03-28 22:06:29,000 p=10711 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-03-28 22:06:29,007 p=10711 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d) 
+2023-03-28 22:06:29,008 p=10711 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d) 
+2023-03-28 22:06:29,027 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-03-28 22:06:29,101 p=10711 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/geerlingguy.php/tasks/configure-opcache.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 22:06:29,130 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Check for existing OpCache config files.] **************************************************************************
+2023-03-28 22:06:30,598 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:06:30,788 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:06:32,119 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:06:32,466 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:06:33,605 p=10711 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:06:33,781 p=10711 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:06:33,799 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Remove any non-role-supplied OpCache config files.] ****************************************************************
+2023-03-28 22:06:33,926 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Ensure OpCache config file is present.] ****************************************************************************
+2023-03-28 22:06:36,560 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:06:36,945 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-03-28 22:06:39,182 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:06:39,936 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-03-28 22:06:42,053 p=10711 u=arthur n=ansible | changed: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:06:42,528 p=10711 u=arthur n=ansible | changed: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-03-28 22:06:42,543 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Remove OpCache config file if OpCache is disabled.] ****************************************************************
+2023-03-28 22:06:42,638 p=10711 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-03-28 22:06:42,644 p=10711 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-03-28 22:06:42,646 p=10711 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d) 
+2023-03-28 22:06:42,734 p=10711 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-03-28 22:06:42,741 p=10711 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-03-28 22:06:42,748 p=10711 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d) 
+2023-03-28 22:06:42,763 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-03-28 22:06:42,855 p=10711 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/geerlingguy.php/tasks/configure-fpm.yml for 10.10.10.1, 10.10.10.2
+2023-03-28 22:06:42,893 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_fpm_daemon.] ********************************************************************************************
+2023-03-28 22:06:42,979 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:06:43,008 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:06:43,023 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_fpm_pool_conf_path.] ************************************************************************************
+2023-03-28 22:06:43,125 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:06:43,147 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:06:43,174 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_fpm_pool_user.] *****************************************************************************************
+2023-03-28 22:06:43,267 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:06:43,296 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:06:43,314 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Define php_fpm_pool_group.] ****************************************************************************************
+2023-03-28 22:06:43,386 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:06:43,439 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:06:43,465 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Stat php_fpm_pool_conf_path] ***************************************************************************************
+2023-03-28 22:06:45,018 p=10711 u=arthur n=ansible | ok: [10.10.10.1]
+2023-03-28 22:06:45,207 p=10711 u=arthur n=ansible | ok: [10.10.10.2]
+2023-03-28 22:06:45,223 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Ensure the default pool directory exists.] *************************************************************************
+2023-03-28 22:06:46,686 p=10711 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 22:06:46,887 p=10711 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 22:06:46,905 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Create fpm pools.] *************************************************************************************************
+2023-03-28 22:06:47,001 p=10711 u=arthur n=ansible | skipping: [10.10.10.1] => (item={'pool_name': 'www', 'pool_template': 'www.conf.j2', 'pool_listen': '127.0.0.1:9000', 'pool_listen_allowed_clients': '127.0.0.1', 'pool_pm': 'dynamic', 'pool_pm_max_children': 50, 'pool_pm_start_servers': 5, 'pool_pm_min_spare_servers': 5, 'pool_pm_max_spare_servers': 5, 'pool_php_fpm_pm_max_requests': 0}) 
+2023-03-28 22:06:47,071 p=10711 u=arthur n=ansible | skipping: [10.10.10.2] => (item={'pool_name': 'www', 'pool_template': 'www.conf.j2', 'pool_listen': '127.0.0.1:9000', 'pool_listen_allowed_clients': '127.0.0.1', 'pool_pm': 'dynamic', 'pool_pm_max_children': 50, 'pool_pm_start_servers': 5, 'pool_pm_min_spare_servers': 5, 'pool_pm_max_spare_servers': 5, 'pool_php_fpm_pm_max_requests': 0}) 
+2023-03-28 22:06:47,092 p=10711 u=arthur n=ansible | TASK [geerlingguy.php : Ensure php-fpm is started and enabled at boot (if configured).] ****************************************************
+2023-03-28 22:06:47,162 p=10711 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 22:06:47,212 p=10711 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 22:06:47,254 p=10711 u=arthur n=ansible | TASK [wordpress : create /var/www/psvpro.tk directory for unarchiving] *********************************************************************
+2023-03-28 22:06:48,591 p=10711 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 22:06:48,760 p=10711 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 22:06:48,788 p=10711 u=arthur n=ansible | TASK [wordpress : Download and unpack latest WordPress] ************************************************************************************
+2023-03-28 22:07:06,610 p=10711 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 22:07:07,025 p=10711 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 22:07:07,041 p=10711 u=arthur n=ansible | TASK [wordpress : Set ownership] ***********************************************************************************************************
+2023-03-28 22:07:09,722 p=10711 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 22:07:10,173 p=10711 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 22:07:10,191 p=10711 u=arthur n=ansible | TASK [wordpress : Set permissions for directories] *****************************************************************************************
+2023-03-28 22:07:15,433 p=10711 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 22:07:16,298 p=10711 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 22:07:16,315 p=10711 u=arthur n=ansible | TASK [wordpress : Set permissions for files] ***********************************************************************************************
+2023-03-28 22:07:48,720 p=10711 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 22:07:49,122 p=10711 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 22:07:49,137 p=10711 u=arthur n=ansible | TASK [wordpress : Set up wp-config] ********************************************************************************************************
+2023-03-28 22:07:52,004 p=10711 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 22:07:52,442 p=10711 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 22:07:52,462 p=10711 u=arthur n=ansible | RUNNING HANDLER [geerlingguy.php : restart webserver] **************************************************************************************
+2023-03-28 22:07:58,505 p=10711 u=arthur n=ansible | changed: [10.10.10.2]
+2023-03-28 22:07:58,881 p=10711 u=arthur n=ansible | changed: [10.10.10.1]
+2023-03-28 22:07:58,882 p=10711 u=arthur n=ansible | RUNNING HANDLER [geerlingguy.php : restart php-fpm] ****************************************************************************************
+2023-03-28 22:07:59,019 p=10711 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-03-28 22:07:59,033 p=10711 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-03-28 22:07:59,062 p=10711 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-03-28 22:07:59,063 p=10711 u=arthur n=ansible | 10.10.10.1                 : ok=36   changed=13   unreachable=0    failed=0    skipped=13   rescued=0    ignored=0   
+2023-03-28 22:07:59,063 p=10711 u=arthur n=ansible | 10.10.10.2                 : ok=36   changed=13   unreachable=0    failed=0    skipped=13   rescued=0    ignored=0   
+>>>>>>> 3413234 (added roles for nginx, mysql, php, wordpress from ansible-galaxy(collections))

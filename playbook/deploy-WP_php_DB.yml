@@ -1,0 +1,10 @@
+---
+- hosts: myservs
+
+  vars_files:
+    - vars/wordpress.yml
+
+  roles:
+    - geerlingguy.php
+    - community.mysql
+    - wordpress
