@@ -3,7 +3,7 @@
 
   vars_files:
     - vars/wordpress.yml
-
+    - vars/wordpress-vault.yml
   roles:
     - geerlingguy.php
     - community.mysql

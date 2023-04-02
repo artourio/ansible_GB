@@ -942,3 +942,225 @@ The offending line appears to be:
 2023-03-28 22:07:59,063 p=10711 u=arthur n=ansible | 10.10.10.1                 : ok=36   changed=13   unreachable=0    failed=0    skipped=13   rescued=0    ignored=0   
 2023-03-28 22:07:59,063 p=10711 u=arthur n=ansible | 10.10.10.2                 : ok=36   changed=13   unreachable=0    failed=0    skipped=13   rescued=0    ignored=0   
 >>>>>>> 3413234 (added roles for nginx, mysql, php, wordpress from ansible-galaxy(collections))
+2023-04-02 13:31:37,516 p=4733 u=arthur n=ansible | 10.10.10.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-04-02 13:31:39,301 p=4733 u=arthur n=ansible | 10.10.10.2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-04-02 13:39:22,387 p=5143 u=arthur n=ansible | ERROR! the role 'nginx' was not found in /home/arthur/repos/ansible_GB/playbook/roles:/home/arthur/repos/ansible_GB/roles:/home/arthur/repos/ansible_GB/playbook
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-WP_php_DB_nginx.yml': line 11, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - wordpress
+    - nginx
+      ^ here
+
+2023-04-02 13:42:08,934 p=5226 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-02 13:42:08,966 p=5226 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-02 13:42:09,024 p=5226 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-02 13:42:18,818 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:42:24,863 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:42:24,923 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Include OS-specific variables.] ************************************************************************************
+2023-04-02 13:42:25,074 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:42:25,085 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:42:25,110 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Include distribution and version-specific vars.] *******************************************************************
+2023-04-02 13:42:25,249 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Set the default PHP version for Debian-based OSes.] ****************************************************************
+2023-04-02 13:42:25,364 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:42:25,433 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:42:25,464 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_packages.] **********************************************************************************************
+2023-04-02 13:42:25,558 p=5226 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-04-02 13:42:25,617 p=5226 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-04-02 13:42:25,638 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_webserver_daemon.] **************************************************************************************
+2023-04-02 13:42:25,752 p=5226 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-04-02 13:42:25,818 p=5226 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-04-02 13:42:25,844 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_conf_paths.] ********************************************************************************************
+2023-04-02 13:42:25,978 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:42:26,029 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:42:26,049 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_extension_conf_paths.] **********************************************************************************
+2023-04-02 13:42:26,214 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:42:26,283 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:42:26,307 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_apc_conf_filename.] *************************************************************************************
+2023-04-02 13:42:26,467 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:42:26,547 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:42:26,601 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_opcache_conf_filename (Ubuntu 16.04).] ******************************************************************
+2023-04-02 13:42:26,709 p=5226 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-04-02 13:42:26,783 p=5226 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-04-02 13:42:26,807 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_opcache_conf_filename.] *********************************************************************************
+2023-04-02 13:42:26,942 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:42:26,997 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:42:27,025 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_fpm_conf_path.] *****************************************************************************************
+2023-04-02 13:42:27,171 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:42:27,225 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:42:27,258 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-04-02 13:42:27,361 p=5226 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-04-02 13:42:27,431 p=5226 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-04-02 13:42:27,460 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-04-02 13:42:27,652 p=5226 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/geerlingguy.php/tasks/setup-Debian.yml for 10.10.10.1, 10.10.10.2
+2023-04-02 13:42:27,700 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Update apt cache.] *************************************************************************************************
+2023-04-02 13:42:49,651 p=5226 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-02 13:43:07,392 p=5226 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-02 13:43:07,416 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Ensure PHP packages are installed.] ********************************************************************************
+2023-04-02 13:43:11,959 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:43:15,369 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:43:15,393 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Delete APCu configuration file if this role will provide one.] *****************************************************
+2023-04-02 13:43:15,561 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-04-02 13:43:15,614 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-04-02 13:43:15,641 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d) 
+2023-04-02 13:43:15,675 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-04-02 13:43:15,702 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-04-02 13:43:15,732 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d) 
+2023-04-02 13:43:15,784 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Delete OpCache configuration file if this role will provide one.] **************************************************
+2023-04-02 13:43:15,968 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-04-02 13:43:15,971 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-04-02 13:43:15,973 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-04-02 13:43:15,974 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-04-02 13:43:15,999 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d) 
+2023-04-02 13:43:16,026 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d) 
+2023-04-02 13:43:16,066 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-04-02 13:43:16,162 p=5226 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-04-02 13:43:16,233 p=5226 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-04-02 13:43:16,248 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-04-02 13:43:16,364 p=5226 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/geerlingguy.php/tasks/configure.yml for 10.10.10.1, 10.10.10.2
+2023-04-02 13:43:16,399 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Ensure configuration directories exist.] ***************************************************************************
+2023-04-02 13:43:18,498 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm)
+2023-04-02 13:43:19,725 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm)
+2023-04-02 13:43:19,951 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2)
+2023-04-02 13:43:21,569 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli)
+2023-04-02 13:43:22,610 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2)
+2023-04-02 13:43:23,115 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-04-02 13:43:24,483 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-04-02 13:43:25,885 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-04-02 13:43:25,992 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli)
+2023-04-02 13:43:28,365 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-04-02 13:43:30,713 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-04-02 13:43:33,210 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-04-02 13:43:33,259 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Place PHP configuration file in place.] ****************************************************************************
+2023-04-02 13:43:37,235 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm)
+2023-04-02 13:43:39,788 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm)
+2023-04-02 13:43:40,191 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2)
+2023-04-02 13:43:43,099 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli)
+2023-04-02 13:43:45,288 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2)
+2023-04-02 13:43:49,812 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli)
+2023-04-02 13:43:49,840 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-04-02 13:43:49,960 p=5226 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/geerlingguy.php/tasks/configure-apcu.yml for 10.10.10.1, 10.10.10.2
+2023-04-02 13:43:49,990 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Check for existing APCu config files.] *****************************************************************************
+2023-04-02 13:43:51,979 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-04-02 13:43:53,349 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-04-02 13:43:53,530 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-04-02 13:43:54,834 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-04-02 13:43:55,969 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-04-02 13:43:57,926 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-04-02 13:43:57,966 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Remove any non-role-supplied APCu config files.] *******************************************************************
+2023-04-02 13:43:58,108 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/fpm/conf.d'], 'contains': 'extension(\\s+)?=(\\s+)?apc[u]?\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/fpm/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/fpm/conf.d/20-apcu.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 66, 'inode': 45, 'dev': 64768, 'nlink': 1, 'atime': 1680026790.4069881, 'mtime': 1680026781.2620544, 'ctime': 1680026782.306149, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:43:58,131 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/apache2/conf.d'], 'contains': 'extension(\\s+)?=(\\s+)?apc[u]?\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/apache2/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/apache2/conf.d/20-apcu.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 66, 'inode': 46, 'dev': 64768, 'nlink': 1, 'atime': 1680026791.9231644, 'mtime': 1680026784.038313, 'ctime': 1680026785.290437, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:43:58,162 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/cli/conf.d'], 'contains': 'extension(\\s+)?=(\\s+)?apc[u]?\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/cli/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/cli/conf.d/20-apcu.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 66, 'inode': 47, 'dev': 64768, 'nlink': 1, 'atime': 1680026793.4393468, 'mtime': 1680026787.3426497, 'ctime': 1680026788.5547805, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:43:58,211 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/fpm/conf.d'], 'contains': 'extension(\\s+)?=(\\s+)?apc[u]?\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/fpm/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/fpm/conf.d/20-apcu.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 66, 'inode': 45, 'dev': 64768, 'nlink': 1, 'atime': 1680026790.59405, 'mtime': 1680026781.0497913, 'ctime': 1680026782.213803, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:43:58,217 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/apache2/conf.d'], 'contains': 'extension(\\s+)?=(\\s+)?apc[u]?\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/apache2/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/apache2/conf.d/20-apcu.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 66, 'inode': 46, 'dev': 64768, 'nlink': 1, 'atime': 1680026792.2781322, 'mtime': 1680026783.677826, 'ctime': 1680026784.7138474, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:43:58,245 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/cli/conf.d'], 'contains': 'extension(\\s+)?=(\\s+)?apc[u]?\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/cli/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/cli/conf.d/20-apcu.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 66, 'inode': 47, 'dev': 64768, 'nlink': 1, 'atime': 1680026793.598204, 'mtime': 1680026786.3978918, 'ctime': 1680026787.6459317, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:43:58,279 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Ensure APCu config file is present.] *******************************************************************************
+2023-04-02 13:44:01,286 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-04-02 13:44:04,267 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-04-02 13:44:04,513 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-04-02 13:44:06,989 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-04-02 13:44:09,717 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-04-02 13:44:14,153 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-04-02 13:44:14,188 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Remove APCu config file if APC is disabled.] ***********************************************************************
+2023-04-02 13:44:14,346 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-04-02 13:44:14,352 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-04-02 13:44:14,381 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d) 
+2023-04-02 13:44:14,398 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-04-02 13:44:14,418 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-04-02 13:44:14,457 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d) 
+2023-04-02 13:44:14,492 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-04-02 13:44:14,615 p=5226 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/geerlingguy.php/tasks/configure-opcache.yml for 10.10.10.1, 10.10.10.2
+2023-04-02 13:44:14,668 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Check for existing OpCache config files.] **************************************************************************
+2023-04-02 13:44:16,272 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-04-02 13:44:17,656 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-04-02 13:44:17,813 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-04-02 13:44:19,259 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-04-02 13:44:20,319 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-04-02 13:44:22,677 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-04-02 13:44:22,695 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Remove any non-role-supplied OpCache config files.] ****************************************************************
+2023-04-02 13:44:22,842 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/fpm/conf.d'], 'contains': 'zend_extension(\\s+)?=(\\s+)?opcache\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/fpm/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/fpm/conf.d/10-opcache.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 302, 'inode': 48, 'dev': 64768, 'nlink': 1, 'atime': 1680428633.0575297, 'mtime': 1680026795.503604, 'ctime': 1680026796.755765, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:44:22,863 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/apache2/conf.d'], 'contains': 'zend_extension(\\s+)?=(\\s+)?opcache\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/apache2/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/apache2/conf.d/10-opcache.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 302, 'inode': 49, 'dev': 64768, 'nlink': 1, 'atime': 1680428635.701508, 'mtime': 1680026798.5400007, 'ctime': 1680026799.7641664, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:44:22,917 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/cli/conf.d'], 'contains': 'zend_extension(\\s+)?=(\\s+)?opcache\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/cli/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/cli/conf.d/10-opcache.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 302, 'inode': 50, 'dev': 64768, 'nlink': 1, 'atime': 1680428637.6614935, 'mtime': 1680026801.340385, 'ctime': 1680026802.3965344, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:44:22,975 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/fpm/conf.d'], 'contains': 'zend_extension(\\s+)?=(\\s+)?opcache\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/fpm/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/fpm/conf.d/10-opcache.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 302, 'inode': 48, 'dev': 64768, 'nlink': 1, 'atime': 1680428631.7787373, 'mtime': 1680026795.3023052, 'ctime': 1680026796.3863752, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:44:22,993 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/apache2/conf.d'], 'contains': 'zend_extension(\\s+)?=(\\s+)?opcache\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/apache2/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/apache2/conf.d/10-opcache.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 302, 'inode': 49, 'dev': 64768, 'nlink': 1, 'atime': 1680428633.1747363, 'mtime': 1680026797.870477, 'ctime': 1680026799.0345619, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:44:23,024 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=[{'changed': False, 'msg': '', 'matched': 1, 'examined': 2, 'invocation': {'module_args': {'paths': ['/etc/php/7.0/cli/conf.d'], 'contains': 'zend_extension(\\s+)?=(\\s+)?opcache\\.so', 'patterns': ['*'], 'file_type': 'file', 'age_stamp': 'mtime', 'recurse': False, 'hidden': False, 'follow': False, 'get_checksum': False, 'use_regex': False, 'excludes': None, 'age': None, 'size': None, 'depth': None}}, 'failed': False, 'item': '/etc/php/7.0/cli/conf.d', 'ansible_loop_var': 'item'}, {'path': '/etc/php/7.0/cli/conf.d/10-opcache.ini', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 302, 'inode': 50, 'dev': 64768, 'nlink': 1, 'atime': 1680428634.6667361, 'mtime': 1680026800.7506955, 'ctime': 1680026801.8787882, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}]) 
+2023-04-02 13:44:23,052 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Ensure OpCache config file is present.] ****************************************************************************
+2023-04-02 13:44:26,575 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d)
+2023-04-02 13:44:28,765 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d)
+2023-04-02 13:44:29,651 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d)
+2023-04-02 13:44:32,509 p=5226 u=arthur n=ansible | ok: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d)
+2023-04-02 13:44:34,334 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d)
+2023-04-02 13:44:38,989 p=5226 u=arthur n=ansible | ok: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d)
+2023-04-02 13:44:39,023 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Remove OpCache config file if OpCache is disabled.] ****************************************************************
+2023-04-02 13:44:39,174 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-04-02 13:44:39,185 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-04-02 13:44:39,210 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item=/etc/php/7.0/cli/conf.d) 
+2023-04-02 13:44:39,244 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/fpm/conf.d) 
+2023-04-02 13:44:39,265 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/apache2/conf.d) 
+2023-04-02 13:44:39,274 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item=/etc/php/7.0/cli/conf.d) 
+2023-04-02 13:44:39,307 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : include_tasks] *****************************************************************************************************
+2023-04-02 13:44:39,436 p=5226 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/geerlingguy.php/tasks/configure-fpm.yml for 10.10.10.1, 10.10.10.2
+2023-04-02 13:44:39,496 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_fpm_daemon.] ********************************************************************************************
+2023-04-02 13:44:39,598 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:44:39,667 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:44:39,687 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_fpm_pool_conf_path.] ************************************************************************************
+2023-04-02 13:44:39,847 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:44:39,883 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:44:39,906 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_fpm_pool_user.] *****************************************************************************************
+2023-04-02 13:44:40,044 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:44:40,105 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:44:40,126 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Define php_fpm_pool_group.] ****************************************************************************************
+2023-04-02 13:44:40,267 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:44:40,340 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:44:40,368 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Stat php_fpm_pool_conf_path] ***************************************************************************************
+2023-04-02 13:44:42,475 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:44:43,793 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:44:43,823 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Ensure the default pool directory exists.] *************************************************************************
+2023-04-02 13:44:43,972 p=5226 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-04-02 13:44:43,975 p=5226 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-04-02 13:44:44,017 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Create fpm pools.] *************************************************************************************************
+2023-04-02 13:44:44,139 p=5226 u=arthur n=ansible | skipping: [10.10.10.1] => (item={'pool_name': 'www', 'pool_template': 'www.conf.j2', 'pool_listen': '127.0.0.1:9000', 'pool_listen_allowed_clients': '127.0.0.1', 'pool_pm': 'dynamic', 'pool_pm_max_children': 50, 'pool_pm_start_servers': 5, 'pool_pm_min_spare_servers': 5, 'pool_pm_max_spare_servers': 5, 'pool_php_fpm_pm_max_requests': 0}) 
+2023-04-02 13:44:44,205 p=5226 u=arthur n=ansible | skipping: [10.10.10.2] => (item={'pool_name': 'www', 'pool_template': 'www.conf.j2', 'pool_listen': '127.0.0.1:9000', 'pool_listen_allowed_clients': '127.0.0.1', 'pool_pm': 'dynamic', 'pool_pm_max_children': 50, 'pool_pm_start_servers': 5, 'pool_pm_min_spare_servers': 5, 'pool_pm_max_spare_servers': 5, 'pool_php_fpm_pm_max_requests': 0}) 
+2023-04-02 13:44:44,234 p=5226 u=arthur n=ansible | TASK [geerlingguy.php : Ensure php-fpm is started and enabled at boot (if configured).] ****************************************************
+2023-04-02 13:44:44,342 p=5226 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-04-02 13:44:44,389 p=5226 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-04-02 13:44:44,454 p=5226 u=arthur n=ansible | TASK [wordpress : create /var/www/psvpro.tk directory for unarchiving] *********************************************************************
+2023-04-02 13:44:46,002 p=5226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:44:47,145 p=5226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:44:47,203 p=5226 u=arthur n=ansible | TASK [wordpress : Download and unpack latest WordPress] ************************************************************************************
+2023-04-02 13:44:47,759 p=5226 u=arthur n=ansible | skipping: [10.10.10.2]
+2023-04-02 13:44:48,113 p=5226 u=arthur n=ansible | skipping: [10.10.10.1]
+2023-04-02 13:44:48,131 p=5226 u=arthur n=ansible | TASK [wordpress : Set ownership] ***********************************************************************************************************
+2023-04-02 13:44:51,447 p=5226 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-02 13:44:54,109 p=5226 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-02 13:44:54,137 p=5226 u=arthur n=ansible | TASK [wordpress : Set permissions for directories] *****************************************************************************************
+2023-04-02 13:44:59,709 p=5226 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-02 13:45:05,411 p=5226 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-02 13:45:05,457 p=5226 u=arthur n=ansible | TASK [wordpress : Set permissions for files] ***********************************************************************************************
+2023-04-02 13:45:40,945 p=5226 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-02 13:46:12,478 p=5226 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-02 13:46:12,509 p=5226 u=arthur n=ansible | TASK [wordpress : Set up wp-config] ********************************************************************************************************
+2023-04-02 13:46:16,019 p=5226 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-02 13:46:18,347 p=5226 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-02 13:46:18,403 p=5226 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-02 13:46:18,403 p=5226 u=arthur n=ansible | 10.10.10.1                 : ok=31   changed=5    unreachable=0    failed=0    skipped=16   rescued=0    ignored=0   
+2023-04-02 13:46:18,403 p=5226 u=arthur n=ansible | 10.10.10.2                 : ok=31   changed=5    unreachable=0    failed=0    skipped=16   rescued=0    ignored=0   
+2023-04-02 13:54:23,654 p=6165 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-02 13:54:23,678 p=6165 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-02 13:54:23,709 p=6165 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-02 13:54:32,400 p=6165 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 13:54:32,411 p=6165 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 13:54:32,490 p=6165 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-02 13:54:32,490 p=6165 u=arthur n=ansible | 10.10.10.1                 : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-02 13:54:32,490 p=6165 u=arthur n=ansible | 10.10.10.2                 : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

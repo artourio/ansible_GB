@@ -1,0 +1,11 @@
+---
+- hosts: myservs
+
+  vars_files:
+    - vars/wordpress.yml
+    - vars/wordpress-vault.yml
+  roles:
+    - { role: geerlingguy.php, tags: [php] }
+    - { role: community.mysql, tags: [mysql] }
+    - { role: wordpress, tags: [wordpress] }
+    - { role: nginxinc.nginx_core, tags: [nginx_core] }
