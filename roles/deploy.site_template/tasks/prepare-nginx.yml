@@ -1,0 +1,34 @@
+---
+- name: create sites-available dir
+  file:
+    path: /etc/nginx/sites-available
+    state: directory
+    mode: '775'
+    owner: nginx
+    group: nginx
+  tags: prepare_nginx
+
+- name: create sites-enabled dir
+  file:
+    path: /etc/nginx/sites-enabled
+    state: directory
+    mode: '775'
+    owner: nginx
+    group: nginx
+  tags: prepare_nginx
+
+- name: delete site-enabled conf file if exist
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+  tags: prepare_nginx
+        
+- name: create file for nginx conf
+  file:
+    path: /etc/nginx/sites-available/default
+    state: touch
+    mode: '775'
+    owner: nginx
+    group: nginx
+  tags: prepare_nginx    
+

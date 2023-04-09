@@ -1,0 +1,8 @@
+---
+- hosts: myservs
+  
+  vars_files:
+    - ~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml
+
+  roles:
+    - ~/repos/ansible_GB/roles/deploy.site_template

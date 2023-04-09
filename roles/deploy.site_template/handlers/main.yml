@@ -1,0 +1,6 @@
+---
+# handlers file for deploy.site_template
+- name: Restart Nginx
+  service:
+    name: nginx
+    state: restarted

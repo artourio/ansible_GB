@@ -1164,3 +1164,1456 @@ The offending line appears to be:
 2023-04-02 13:54:32,490 p=6165 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
 2023-04-02 13:54:32,490 p=6165 u=arthur n=ansible | 10.10.10.1                 : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2023-04-02 13:54:32,490 p=6165 u=arthur n=ansible | 10.10.10.2                 : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-02 18:03:41,245 p=13169 u=arthur n=ansible | [WARNING]: Unable to parse /home/arthur/repos/ansible_GB/inventory as an
+inventory source
+
+2023-04-02 18:03:41,246 p=13169 u=arthur n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-02 18:03:41,258 p=13169 u=arthur n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2023-04-02 18:03:41,259 p=13169 u=arthur n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: myservs
+
+2023-04-02 18:04:54,890 p=13214 u=arthur n=ansible | [WARNING]: Unable to parse /home/arthur/repos/ansible_GB/inventory as an
+inventory source
+
+2023-04-02 18:04:54,890 p=13214 u=arthur n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-02 18:04:54,900 p=13214 u=arthur n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2023-04-02 18:05:43,344 p=13218 u=arthur n=ansible | 10.10.10.2 | SUCCESS => {
+    "cache_update_time": 1680428562,
+    "cache_updated": false,
+    "changed": false
+}
+2023-04-02 18:05:43,769 p=13218 u=arthur n=ansible | 10.10.10.1 | SUCCESS => {
+    "cache_update_time": 1680428575,
+    "cache_updated": false,
+    "changed": false
+}
+2023-04-02 18:06:40,979 p=13247 u=arthur n=ansible | 10.10.10.1 | FAILED! => {
+    "changed": false,
+    "msg": "value of state must be one of: absent, build-dep, fixed, latest, present, got: removed"
+}
+2023-04-02 18:06:41,117 p=13247 u=arthur n=ansible | 10.10.10.2 | FAILED! => {
+    "changed": false,
+    "msg": "value of state must be one of: absent, build-dep, fixed, latest, present, got: removed"
+}
+2023-04-02 18:07:08,971 p=13268 u=arthur n=ansible | 10.10.10.1 | CHANGED => {
+    "changed": true,
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following packages will be REMOVED:\n  net-tools\n0 upgraded, 0 newly installed, 1 to remove and 2 not upgraded.\nAfter this operation, 819 kB disk space will be freed.\n(Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 141094 files and directories currently installed.)\r\nRemoving net-tools (1.60+git20181103.0eebece-1ubuntu5) ...\r\n",
+    "stdout_lines": [
+        "Reading package lists...",
+        "Building dependency tree...",
+        "Reading state information...",
+        "The following packages will be REMOVED:",
+        "  net-tools",
+        "0 upgraded, 0 newly installed, 1 to remove and 2 not upgraded.",
+        "After this operation, 819 kB disk space will be freed.",
+        "(Reading database ... ",
+        "(Reading database ... 5%",
+        "(Reading database ... 10%",
+        "(Reading database ... 15%",
+        "(Reading database ... 20%",
+        "(Reading database ... 25%",
+        "(Reading database ... 30%",
+        "(Reading database ... 35%",
+        "(Reading database ... 40%",
+        "(Reading database ... 45%",
+        "(Reading database ... 50%",
+        "(Reading database ... 55%",
+        "(Reading database ... 60%",
+        "(Reading database ... 65%",
+        "(Reading database ... 70%",
+        "(Reading database ... 75%",
+        "(Reading database ... 80%",
+        "(Reading database ... 85%",
+        "(Reading database ... 90%",
+        "(Reading database ... 95%",
+        "(Reading database ... 100%",
+        "(Reading database ... 141094 files and directories currently installed.)",
+        "Removing net-tools (1.60+git20181103.0eebece-1ubuntu5) ..."
+    ]
+}
+2023-04-02 18:07:09,048 p=13268 u=arthur n=ansible | 10.10.10.2 | CHANGED => {
+    "changed": true,
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following packages will be REMOVED:\n  net-tools\n0 upgraded, 0 newly installed, 1 to remove and 2 not upgraded.\nAfter this operation, 819 kB disk space will be freed.\n(Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 102636 files and directories currently installed.)\r\nRemoving net-tools (1.60+git20181103.0eebece-1ubuntu5) ...\r\n",
+    "stdout_lines": [
+        "Reading package lists...",
+        "Building dependency tree...",
+        "Reading state information...",
+        "The following packages will be REMOVED:",
+        "  net-tools",
+        "0 upgraded, 0 newly installed, 1 to remove and 2 not upgraded.",
+        "After this operation, 819 kB disk space will be freed.",
+        "(Reading database ... ",
+        "(Reading database ... 5%",
+        "(Reading database ... 10%",
+        "(Reading database ... 15%",
+        "(Reading database ... 20%",
+        "(Reading database ... 25%",
+        "(Reading database ... 30%",
+        "(Reading database ... 35%",
+        "(Reading database ... 40%",
+        "(Reading database ... 45%",
+        "(Reading database ... 50%",
+        "(Reading database ... 55%",
+        "(Reading database ... 60%",
+        "(Reading database ... 65%",
+        "(Reading database ... 70%",
+        "(Reading database ... 75%",
+        "(Reading database ... 80%",
+        "(Reading database ... 85%",
+        "(Reading database ... 90%",
+        "(Reading database ... 95%",
+        "(Reading database ... 100%",
+        "(Reading database ... 102636 files and directories currently installed.)",
+        "Removing net-tools (1.60+git20181103.0eebece-1ubuntu5) ..."
+    ]
+}
+2023-04-02 18:08:03,271 p=13295 u=arthur n=ansible | 10.10.10.1 | CHANGED => {
+    "cache_update_time": 1680428575,
+    "cache_updated": false,
+    "changed": true,
+    "stderr": "debconf: delaying package configuration, since apt-utils is not installed\n",
+    "stderr_lines": [
+        "debconf: delaying package configuration, since apt-utils is not installed"
+    ],
+    "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following NEW packages will be installed:\n  net-tools\n0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.\nNeed to get 204 kB of archives.\nAfter this operation, 819 kB of additional disk space will be used.\nGet:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 net-tools amd64 1.60+git20181103.0eebece-1ubuntu5 [204 kB]\nFetched 204 kB in 1s (275 kB/s)\nSelecting previously unselected package net-tools.\r\n(Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 141045 files and directories currently installed.)\r\nPreparing to unpack .../net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb ...\r\nUnpacking net-tools (1.60+git20181103.0eebece-1ubuntu5) ...\r\nSetting up net-tools (1.60+git20181103.0eebece-1ubuntu5) ...\r\nNEEDRESTART-VER: 3.5\nNEEDRESTART-KCUR: 5.15.0-67-generic\nNEEDRESTART-KEXP: 5.15.0-69-generic\nNEEDRESTART-KSTA: 3\n",
+    "stdout_lines": [
+        "Reading package lists...",
+        "Building dependency tree...",
+        "Reading state information...",
+        "The following NEW packages will be installed:",
+        "  net-tools",
+        "0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.",
+        "Need to get 204 kB of archives.",
+        "After this operation, 819 kB of additional disk space will be used.",
+        "Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 net-tools amd64 1.60+git20181103.0eebece-1ubuntu5 [204 kB]",
+        "Fetched 204 kB in 1s (275 kB/s)",
+        "Selecting previously unselected package net-tools.",
+        "(Reading database ... ",
+        "(Reading database ... 5%",
+        "(Reading database ... 10%",
+        "(Reading database ... 15%",
+        "(Reading database ... 20%",
+        "(Reading database ... 25%",
+        "(Reading database ... 30%",
+        "(Reading database ... 35%",
+        "(Reading database ... 40%",
+        "(Reading database ... 45%",
+        "(Reading database ... 50%",
+        "(Reading database ... 55%",
+        "(Reading database ... 60%",
+        "(Reading database ... 65%",
+        "(Reading database ... 70%",
+        "(Reading database ... 75%",
+        "(Reading database ... 80%",
+        "(Reading database ... 85%",
+        "(Reading database ... 90%",
+        "(Reading database ... 95%",
+        "(Reading database ... 100%",
+        "(Reading database ... 141045 files and directories currently installed.)",
+        "Preparing to unpack .../net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb ...",
+        "Unpacking net-tools (1.60+git20181103.0eebece-1ubuntu5) ...",
+        "Setting up net-tools (1.60+git20181103.0eebece-1ubuntu5) ...",
+        "NEEDRESTART-VER: 3.5",
+        "NEEDRESTART-KCUR: 5.15.0-67-generic",
+        "NEEDRESTART-KEXP: 5.15.0-69-generic",
+        "NEEDRESTART-KSTA: 3"
+    ]
+}
+2023-04-02 18:08:03,970 p=13295 u=arthur n=ansible | 10.10.10.2 | CHANGED => {
+    "cache_update_time": 1680428562,
+    "cache_updated": false,
+    "changed": true,
+    "stderr": "debconf: delaying package configuration, since apt-utils is not installed\n",
+    "stderr_lines": [
+        "debconf: delaying package configuration, since apt-utils is not installed"
+    ],
+    "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following NEW packages will be installed:\n  net-tools\n0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.\nNeed to get 204 kB of archives.\nAfter this operation, 819 kB of additional disk space will be used.\nGet:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 net-tools amd64 1.60+git20181103.0eebece-1ubuntu5 [204 kB]\nFetched 204 kB in 1s (311 kB/s)\nSelecting previously unselected package net-tools.\r\n(Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 102587 files and directories currently installed.)\r\nPreparing to unpack .../net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb ...\r\nUnpacking net-tools (1.60+git20181103.0eebece-1ubuntu5) ...\r\nSetting up net-tools (1.60+git20181103.0eebece-1ubuntu5) ...\r\nNEEDRESTART-VER: 3.5\nNEEDRESTART-KCUR: 5.15.0-67-generic\nNEEDRESTART-KEXP: 5.15.0-69-generic\nNEEDRESTART-KSTA: 3\n",
+    "stdout_lines": [
+        "Reading package lists...",
+        "Building dependency tree...",
+        "Reading state information...",
+        "The following NEW packages will be installed:",
+        "  net-tools",
+        "0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.",
+        "Need to get 204 kB of archives.",
+        "After this operation, 819 kB of additional disk space will be used.",
+        "Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 net-tools amd64 1.60+git20181103.0eebece-1ubuntu5 [204 kB]",
+        "Fetched 204 kB in 1s (311 kB/s)",
+        "Selecting previously unselected package net-tools.",
+        "(Reading database ... ",
+        "(Reading database ... 5%",
+        "(Reading database ... 10%",
+        "(Reading database ... 15%",
+        "(Reading database ... 20%",
+        "(Reading database ... 25%",
+        "(Reading database ... 30%",
+        "(Reading database ... 35%",
+        "(Reading database ... 40%",
+        "(Reading database ... 45%",
+        "(Reading database ... 50%",
+        "(Reading database ... 55%",
+        "(Reading database ... 60%",
+        "(Reading database ... 65%",
+        "(Reading database ... 70%",
+        "(Reading database ... 75%",
+        "(Reading database ... 80%",
+        "(Reading database ... 85%",
+        "(Reading database ... 90%",
+        "(Reading database ... 95%",
+        "(Reading database ... 100%",
+        "(Reading database ... 102587 files and directories currently installed.)",
+        "Preparing to unpack .../net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb ...",
+        "Unpacking net-tools (1.60+git20181103.0eebece-1ubuntu5) ...",
+        "Setting up net-tools (1.60+git20181103.0eebece-1ubuntu5) ...",
+        "NEEDRESTART-VER: 3.5",
+        "NEEDRESTART-KCUR: 5.15.0-67-generic",
+        "NEEDRESTART-KEXP: 5.15.0-69-generic",
+        "NEEDRESTART-KSTA: 3"
+    ]
+}
+2023-04-02 23:12:51,837 p=18382 u=arthur n=ansible | 10.10.10.2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-04-02 23:12:52,023 p=18382 u=arthur n=ansible | 10.10.10.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-04-02 23:13:29,332 p=18411 u=arthur n=ansible | ERROR! Vars in a Play must be specified as a dictionary, or a list of dictionaries
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 5, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  vars: "{{ role_path }}/vars"
+        ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2023-04-02 23:17:35,677 p=18451 u=arthur n=ansible | ERROR! Vars in a Play must be specified as a dictionary, or a list of dictionaries
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 5, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  vars: '{{ role_path }}/vars'
+        ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2023-04-02 23:17:59,364 p=18457 u=arthur n=ansible | ERROR! Vars in a Play must be specified as a dictionary, or a list of dictionaries
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 5, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  vars: "{{ role_path }}/vars"
+        ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2023-04-02 23:18:37,981 p=18462 u=arthur n=ansible | ERROR! Vars in a Play must be specified as a dictionary, or a list of dictionaries
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  vars:
+    - "{{ role_path }}/vars"
+    ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2023-04-02 23:19:18,940 p=18469 u=arthur n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 5, column 22, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  vars: { role_path }/vars
+                     ^ here
+
+2023-04-02 23:19:52,221 p=18474 u=arthur n=ansible | ERROR! Vars in a Play must be specified as a dictionary, or a list of dictionaries
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 5, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  vars: "{ role_path }/vars"
+        ^ here
+
+2023-04-02 23:23:39,882 p=18519 u=arthur n=ansible | ERROR! Vars in a Play must be specified as a dictionary, or a list of dictionaries
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 5, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  vars: ~/repos/ansible_GB/roles/deploy.site-template/vars/main.yml
+        ^ here
+
+2023-04-02 23:24:35,616 p=18525 u=arthur n=ansible | ERROR! A malformed role declaration was encountered.
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: deploy site template
+  ^ here
+
+2023-04-02 23:27:44,265 p=18564 u=arthur n=ansible | ERROR! A malformed role declaration was encountered.
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- hosts: myservs
+  ^ here
+
+2023-04-02 23:28:19,570 p=18568 u=arthur n=ansible | ERROR! A malformed role declaration was encountered.
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: myservs
+  ^ here
+
+2023-04-02 23:33:31,427 p=19844 u=arthur n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 11, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: prepare site files
+^ here
+
+2023-04-02 23:33:52,149 p=19850 u=arthur n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 11, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+ - name: prepare site files
+       ^ here
+
+2023-04-02 23:35:48,479 p=19865 u=arthur n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 14, column 10, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+name: prepare site files
+  - tasks:
+         ^ here
+
+2023-04-02 23:36:35,640 p=19871 u=arthur n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 13, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: prepare site files
+^ here
+
+2023-04-02 23:36:49,700 p=19874 u=arthur n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 13, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: prepare site files
+^ here
+
+2023-04-02 23:37:28,541 p=19879 u=arthur n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 2, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+hosts: myservs
+^ here
+
+2023-04-02 23:38:34,584 p=19884 u=arthur n=ansible | ERROR! vars file ~/repos/ansible_GB/roles/deploy.site-template/vars/main.yml was not found
+Could not find file on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-04-02 23:40:22,151 p=19896 u=arthur n=ansible | ERROR! vars file /home/arthur/repos/ansible_GB/roles/deploy.site-template/vars/main.yml was not found
+Could not find file on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-04-02 23:42:43,053 p=19902 u=arthur n=ansible | ERROR! A malformed block was encountered while loading a block
+2023-04-02 23:43:06,496 p=19904 u=arthur n=ansible | ansible-playbook 2.10.8
+  config file = /home/arthur/repos/ansible_GB/ansible.cfg
+  configured module search path = ['/home/arthur/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0]
+2023-04-02 23:43:06,496 p=19904 u=arthur n=ansible | Using /home/arthur/repos/ansible_GB/ansible.cfg as config file
+2023-04-02 23:43:06,702 p=19904 u=arthur n=ansible | ERROR! A malformed block was encountered while loading a block
+2023-04-02 23:50:58,686 p=20216 u=arthur n=ansible | ERROR! A malformed block was encountered while loading a block
+2023-04-02 23:54:22,414 p=20348 u=arthur n=ansible | ERROR! A malformed block was encountered while loading a block
+2023-04-02 23:55:24,113 p=20374 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-02 23:55:24,139 p=20374 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-02 23:55:24,238 p=20374 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-02 23:55:32,665 p=20374 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 23:55:32,843 p=20374 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 23:55:32,889 p=20374 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-02 23:55:32,889 p=20374 u=arthur n=ansible | 10.10.10.1                 : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-02 23:55:32,890 p=20374 u=arthur n=ansible | 10.10.10.2                 : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-02 23:58:31,787 p=20587 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-02 23:58:31,811 p=20587 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-02 23:58:31,890 p=20587 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-02 23:58:39,518 p=20587 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-02 23:58:39,637 p=20587 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-02 23:58:39,682 p=20587 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-02 23:58:39,683 p=20587 u=arthur n=ansible | 10.10.10.1                 : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-02 23:58:39,683 p=20587 u=arthur n=ansible | 10.10.10.2                 : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:01:07,425 p=20891 u=arthur n=ansible | ERROR! A malformed block was encountered while loading a block
+2023-04-03 00:03:05,213 p=20899 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 00:03:05,239 p=20899 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 00:03:05,328 p=20899 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 00:03:12,442 p=20899 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:03:12,840 p=20899 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:03:12,880 p=20899 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 00:03:12,881 p=20899 u=arthur n=ansible | 10.10.10.1                 : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:03:12,881 p=20899 u=arthur n=ansible | 10.10.10.2                 : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:12:27,101 p=21682 u=arthur n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/main.yml': line 24, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: Apply Nginx template
+    template:
+            ^ here
+
+2023-04-03 00:14:52,235 p=21693 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 00:14:52,260 p=21693 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 00:14:52,284 p=21693 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 00:14:59,897 p=21693 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:15:00,189 p=21693 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:15:00,222 p=21693 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 00:15:01,610 p=21693 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 00:15:01,834 p=21693 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 00:15:01,848 p=21693 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 00:15:03,030 p=21693 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 00:15:03,248 p=21693 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 00:15:03,261 p=21693 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 00:15:07,299 p=21693 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 00:15:07,355 p=21693 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 00:15:07,378 p=21693 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 00:15:07,629 p=21693 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: |-
+    Could not find or access '/home/arthur/tmp/templatemo_521_get_ready.zip' on the Ansible Controller.
+    If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-04-03 00:15:07,658 p=21693 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: |-
+    Could not find or access '/home/arthur/tmp/templatemo_521_get_ready.zip' on the Ansible Controller.
+    If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-04-03 00:15:07,662 p=21693 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 00:15:07,663 p=21693 u=arthur n=ansible | 10.10.10.1                 : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:15:07,663 p=21693 u=arthur n=ansible | 10.10.10.2                 : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:16:54,415 p=21783 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 00:16:54,436 p=21783 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 00:16:54,459 p=21783 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 00:17:01,753 p=21783 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:17:01,971 p=21783 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:17:02,000 p=21783 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 00:17:03,470 p=21783 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:17:03,612 p=21783 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:17:03,626 p=21783 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 00:17:04,866 p=21783 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:17:05,003 p=21783 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:17:05,016 p=21783 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 00:17:08,832 p=21783 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:17:09,118 p=21783 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:17:09,132 p=21783 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 00:17:09,371 p=21783 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: src (or content) and dest are required
+2023-04-03 00:17:09,374 p=21783 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: src (or content) and dest are required
+2023-04-03 00:17:09,376 p=21783 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 00:17:09,377 p=21783 u=arthur n=ansible | 10.10.10.1                 : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:17:09,377 p=21783 u=arthur n=ansible | 10.10.10.2                 : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:20:21,281 p=22174 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 00:20:21,308 p=22174 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 00:20:21,338 p=22174 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 00:20:29,227 p=22174 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:20:29,583 p=22174 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:20:29,608 p=22174 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 00:20:31,102 p=22174 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:20:31,239 p=22174 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:20:31,258 p=22174 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 00:20:32,627 p=22174 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:20:32,783 p=22174 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:20:32,796 p=22174 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 00:20:36,960 p=22174 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:20:37,092 p=22174 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:20:37,110 p=22174 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 00:20:41,091 p=22174 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: Failed to find handler for "/root/tmp/templatemo_521_get_ready.zip". Make sure the required command to extract the file is installed. Command "/usr/bin/tar" could not handle archive. Command "unzip" not found.
+2023-04-03 00:20:41,173 p=22174 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: Failed to find handler for "/root/tmp/templatemo_521_get_ready.zip". Make sure the required command to extract the file is installed. Command "/usr/bin/tar" could not handle archive. Command "unzip" not found.
+2023-04-03 00:20:41,175 p=22174 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 00:20:41,176 p=22174 u=arthur n=ansible | 10.10.10.1                 : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:20:41,176 p=22174 u=arthur n=ansible | 10.10.10.2                 : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:24:50,134 p=22414 u=arthur n=ansible | ERROR! conflicting action statements: apt, file
+
+The error appears to be in '/home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/main.yml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+# tasks file for deploy.site_template
+- name: create dir for temporary files
+  ^ here
+
+2023-04-03 00:26:22,665 p=22422 u=arthur n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/main.yml': line 10, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: create dir for temporary files
+    file:
+        ^ here
+
+2023-04-03 00:27:23,176 p=22429 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 00:27:23,197 p=22429 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 00:27:23,222 p=22429 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 00:27:30,997 p=22429 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:27:31,328 p=22429 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:27:31,353 p=22429 u=arthur n=ansible | TASK [deploy.site_template : instal unzip] ************************************************************************************************
+2023-04-03 00:27:58,373 p=22429 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 00:27:59,453 p=22429 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 00:27:59,466 p=22429 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 00:28:01,074 p=22429 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:28:01,152 p=22429 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:28:01,168 p=22429 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 00:28:02,599 p=22429 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:28:02,608 p=22429 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:28:02,627 p=22429 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 00:28:06,706 p=22429 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:28:08,158 p=22429 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:28:08,173 p=22429 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 00:28:11,881 p=22429 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 00:28:12,011 p=22429 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 00:28:12,036 p=22429 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 00:28:12,036 p=22429 u=arthur n=ansible | 10.10.10.1                 : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:28:12,036 p=22429 u=arthur n=ansible | 10.10.10.2                 : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:32:35,616 p=22579 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 00:32:35,635 p=22579 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 00:32:35,656 p=22579 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 00:32:43,697 p=22579 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:32:43,953 p=22579 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:32:43,978 p=22579 u=arthur n=ansible | TASK [deploy.site_template : instal unzip] ************************************************************************************************
+2023-04-03 00:32:54,467 p=22579 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:32:54,751 p=22579 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:32:54,765 p=22579 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 00:32:56,367 p=22579 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:32:56,491 p=22579 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:32:56,506 p=22579 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 00:32:57,860 p=22579 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:32:57,998 p=22579 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:32:58,013 p=22579 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 00:33:02,112 p=22579 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:33:02,625 p=22579 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:33:02,639 p=22579 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 00:33:06,231 p=22579 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:33:06,488 p=22579 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:33:06,506 p=22579 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 00:33:06,800 p=22579 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: 'AnsibleUndefinedVariable: ''document_root'' is undefined'
+2023-04-03 00:33:06,823 p=22579 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: 'AnsibleUndefinedVariable: ''document_root'' is undefined'
+2023-04-03 00:33:06,828 p=22579 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 00:33:06,829 p=22579 u=arthur n=ansible | 10.10.10.1                 : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:33:06,829 p=22579 u=arthur n=ansible | 10.10.10.2                 : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:37:22,846 p=22730 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 00:37:22,868 p=22730 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 00:37:22,891 p=22730 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 00:37:30,509 p=22730 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:37:30,904 p=22730 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:37:30,932 p=22730 u=arthur n=ansible | TASK [deploy.site_template : instal unzip] ************************************************************************************************
+2023-04-03 00:37:40,370 p=22730 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:37:41,607 p=22730 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:37:41,620 p=22730 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 00:37:43,097 p=22730 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:37:43,247 p=22730 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:37:43,262 p=22730 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 00:37:44,524 p=22730 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:37:44,723 p=22730 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:37:44,736 p=22730 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 00:37:48,906 p=22730 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:37:49,248 p=22730 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:37:49,265 p=22730 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 00:37:52,811 p=22730 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:37:53,071 p=22730 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:37:53,085 p=22730 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 00:37:53,362 p=22730 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: 'AnsibleUndefinedVariable: ''document_root'' is undefined'
+2023-04-03 00:37:53,377 p=22730 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: 'AnsibleUndefinedVariable: ''document_root'' is undefined'
+2023-04-03 00:37:53,384 p=22730 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 00:37:53,384 p=22730 u=arthur n=ansible | 10.10.10.1                 : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:37:53,384 p=22730 u=arthur n=ansible | 10.10.10.2                 : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:41:08,935 p=23407 u=arthur n=ansible | ERROR! The vars/main.yml file for role 'deploy.site_template' must contain a dictionary of variables
+2023-04-03 00:42:21,997 p=23422 u=arthur n=ansible | ERROR! The vars/main.yml file for role 'deploy.site_template' must contain a dictionary of variables
+2023-04-03 00:42:47,944 p=23425 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 00:42:47,971 p=23425 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 00:42:47,997 p=23425 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 00:42:56,306 p=23425 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:42:56,388 p=23425 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:42:56,415 p=23425 u=arthur n=ansible | TASK [deploy.site_template : instal unzip] ************************************************************************************************
+2023-04-03 00:43:13,304 p=23425 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:43:13,583 p=23425 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:43:13,599 p=23425 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 00:43:15,375 p=23425 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:43:15,397 p=23425 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:43:15,414 p=23425 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 00:43:16,763 p=23425 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:43:16,829 p=23425 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:43:16,843 p=23425 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 00:43:21,222 p=23425 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:43:22,672 p=23425 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:43:22,692 p=23425 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 00:43:26,636 p=23425 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 00:43:26,918 p=23425 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 00:43:26,935 p=23425 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 00:43:27,275 p=23425 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: 'AnsibleUndefinedVariable: ''document_root'' is undefined'
+2023-04-03 00:43:27,280 p=23425 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: 'AnsibleUndefinedVariable: ''document_root'' is undefined'
+2023-04-03 00:43:27,282 p=23425 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 00:43:27,282 p=23425 u=arthur n=ansible | 10.10.10.1                 : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 00:43:27,282 p=23425 u=arthur n=ansible | 10.10.10.2                 : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:01:31,755 p=24292 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:01:31,958 p=24292 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:01:32,144 p=24292 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:01:58,121 p=24292 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:01:59,678 p=24292 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:01:59,747 p=24292 u=arthur n=ansible | TASK [deploy.site_template : instal unzip] ************************************************************************************************
+2023-04-03 01:02:10,764 p=24292 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:02:12,814 p=24292 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:02:12,838 p=24292 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:02:14,727 p=24292 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:02:14,781 p=24292 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:02:14,799 p=24292 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:02:16,215 p=24292 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:02:16,311 p=24292 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:02:16,327 p=24292 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:02:20,409 p=24292 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:02:21,848 p=24292 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:02:21,876 p=24292 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:02:25,956 p=24292 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:02:26,121 p=24292 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:02:26,145 p=24292 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 01:02:26,969 p=24292 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: 'AnsibleUndefinedVariable: ''doc_root'' is undefined'
+2023-04-03 01:02:27,090 p=24292 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: 'AnsibleUndefinedVariable: ''doc_root'' is undefined'
+2023-04-03 01:02:27,092 p=24292 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 01:02:27,092 p=24292 u=arthur n=ansible | 10.10.10.1                 : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:02:27,092 p=24292 u=arthur n=ansible | 10.10.10.2                 : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:07:40,055 p=24489 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:07:40,084 p=24489 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:07:40,116 p=24489 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:07:48,426 p=24489 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:07:48,512 p=24489 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:07:48,541 p=24489 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:07:50,242 p=24489 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:07:50,298 p=24489 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:07:50,312 p=24489 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:07:51,727 p=24489 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:07:51,797 p=24489 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:07:51,810 p=24489 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:07:55,737 p=24489 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:07:55,982 p=24489 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:07:55,997 p=24489 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:07:59,899 p=24489 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:08:00,142 p=24489 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:08:00,161 p=24489 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 01:08:00,478 p=24489 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: 'AnsibleUndefinedVariable: ''doc_root'' is undefined'
+2023-04-03 01:08:00,484 p=24489 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: 'AnsibleUndefinedVariable: ''doc_root'' is undefined'
+2023-04-03 01:08:00,486 p=24489 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 01:08:00,487 p=24489 u=arthur n=ansible | 10.10.10.1                 : ok=5    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:08:00,487 p=24489 u=arthur n=ansible | 10.10.10.2                 : ok=5    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:09:56,194 p=24878 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:09:56,217 p=24878 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:09:56,245 p=24878 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:10:03,855 p=24878 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:10:04,304 p=24878 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:10:04,332 p=24878 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:10:06,104 p=24878 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:10:06,231 p=24878 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:10:06,245 p=24878 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:10:07,432 p=24878 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:10:07,726 p=24878 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:10:07,741 p=24878 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:10:11,467 p=24878 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:10:11,653 p=24878 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:10:11,669 p=24878 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:10:15,336 p=24878 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:10:15,437 p=24878 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:10:15,454 p=24878 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 01:10:18,170 p=24878 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  checksum: 16c5f7126d274808f28c477dea8b1b69e3e78fbd
+  msg: Destination directory /etc/nginx/sites-available does not exist
+2023-04-03 01:10:18,336 p=24878 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  checksum: 1b56b55f73bda9af33881dccd6a7c8e6ee0a0df9
+  msg: Destination directory /etc/nginx/sites-available does not exist
+2023-04-03 01:10:18,338 p=24878 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 01:10:18,339 p=24878 u=arthur n=ansible | 10.10.10.1                 : ok=5    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:10:18,339 p=24878 u=arthur n=ansible | 10.10.10.2                 : ok=5    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:21:24,148 p=25092 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:21:24,172 p=25092 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:21:24,200 p=25092 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:21:31,871 p=25092 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:21:32,180 p=25092 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:21:32,207 p=25092 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:21:33,714 p=25092 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:21:33,868 p=25092 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:21:33,881 p=25092 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:21:35,115 p=25092 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:21:35,278 p=25092 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:21:35,291 p=25092 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:21:39,233 p=25092 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:21:39,620 p=25092 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:21:39,641 p=25092 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:21:43,236 p=25092 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:21:43,511 p=25092 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:21:43,525 p=25092 u=arthur n=ansible | TASK [deploy.site_template : create sites-available dir] **********************************************************************************
+2023-04-03 01:21:44,793 p=25092 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:21:44,952 p=25092 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:21:44,971 p=25092 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:21:46,231 p=25092 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: 'value of state must be one of: absent, directory, file, hard, link, touch, got: present'
+2023-04-03 01:21:46,281 p=25092 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: 'value of state must be one of: absent, directory, file, hard, link, touch, got: present'
+2023-04-03 01:21:46,284 p=25092 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 01:21:46,285 p=25092 u=arthur n=ansible | 10.10.10.1                 : ok=6    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:21:46,285 p=25092 u=arthur n=ansible | 10.10.10.2                 : ok=6    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:22:16,933 p=25226 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:22:16,950 p=25226 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:22:16,969 p=25226 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:22:22,804 p=25226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:22:23,184 p=25226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:22:23,211 p=25226 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:22:24,760 p=25226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:22:24,857 p=25226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:22:24,873 p=25226 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:22:26,154 p=25226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:22:26,239 p=25226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:22:26,256 p=25226 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:22:29,870 p=25226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:22:29,998 p=25226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:22:30,015 p=25226 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:22:33,733 p=25226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:22:33,742 p=25226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:22:33,759 p=25226 u=arthur n=ansible | TASK [deploy.site_template : create sites-available dir] **********************************************************************************
+2023-04-03 01:22:35,120 p=25226 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:22:35,250 p=25226 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:22:35,264 p=25226 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:22:36,485 p=25226 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: 'Error, could not touch target: [Errno 2] No such file or directory: b"[''/etc/nginx/sites-enabled/default'', ''/etc/nginx/sites-available/default'']"'
+  path: '[''/etc/nginx/sites-enabled/default'', ''/etc/nginx/sites-available/default'']'
+2023-04-03 01:22:36,640 p=25226 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: 'Error, could not touch target: [Errno 2] No such file or directory: b"[''/etc/nginx/sites-enabled/default'', ''/etc/nginx/sites-available/default'']"'
+  path: '[''/etc/nginx/sites-enabled/default'', ''/etc/nginx/sites-available/default'']'
+2023-04-03 01:22:36,642 p=25226 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 01:22:36,642 p=25226 u=arthur n=ansible | 10.10.10.1                 : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:22:36,642 p=25226 u=arthur n=ansible | 10.10.10.2                 : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:26:15,739 p=25363 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:26:15,759 p=25363 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:26:15,778 p=25363 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:26:22,850 p=25363 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:26:23,354 p=25363 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:26:23,388 p=25363 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:26:25,172 p=25363 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:26:25,245 p=25363 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:26:25,258 p=25363 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:26:26,520 p=25363 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:26:26,705 p=25363 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:26:26,724 p=25363 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:26:34,147 p=25363 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:26:36,446 p=25363 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:26:36,459 p=25363 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:26:39,949 p=25363 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:26:40,300 p=25363 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:26:40,316 p=25363 u=arthur n=ansible | TASK [deploy.site_template : create sites-available dir] **********************************************************************************
+2023-04-03 01:26:41,538 p=25363 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:26:41,733 p=25363 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:26:41,749 p=25363 u=arthur n=ansible | TASK [deploy.site_template : create sites-enabled dir] ************************************************************************************
+2023-04-03 01:26:42,963 p=25363 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:26:43,142 p=25363 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:26:43,157 p=25363 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:26:44,397 p=25363 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: 'Error, could not touch target: [Errno 2] No such file or directory: b"[''/etc/nginx/sites-enabled/default'', ''/etc/nginx/sites-available/default'']"'
+  path: '[''/etc/nginx/sites-enabled/default'', ''/etc/nginx/sites-available/default'']'
+2023-04-03 01:26:44,530 p=25363 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: 'Error, could not touch target: [Errno 2] No such file or directory: b"[''/etc/nginx/sites-enabled/default'', ''/etc/nginx/sites-available/default'']"'
+  path: '[''/etc/nginx/sites-enabled/default'', ''/etc/nginx/sites-available/default'']'
+2023-04-03 01:26:44,532 p=25363 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 01:26:44,533 p=25363 u=arthur n=ansible | 10.10.10.1                 : ok=7    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:26:44,533 p=25363 u=arthur n=ansible | 10.10.10.2                 : ok=7    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:29:07,083 p=25515 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:29:07,100 p=25515 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:29:07,120 p=25515 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:29:14,543 p=25515 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:29:14,592 p=25515 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:29:14,619 p=25515 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:29:16,108 p=25515 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:29:16,253 p=25515 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:29:16,268 p=25515 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:29:17,633 p=25515 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:29:17,824 p=25515 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:29:17,837 p=25515 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:29:21,732 p=25515 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:29:23,850 p=25515 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:29:23,864 p=25515 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:29:27,478 p=25515 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:29:27,730 p=25515 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:29:27,743 p=25515 u=arthur n=ansible | TASK [deploy.site_template : create sites-available dir] **********************************************************************************
+2023-04-03 01:29:28,987 p=25515 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:29:29,101 p=25515 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:29:29,114 p=25515 u=arthur n=ansible | TASK [deploy.site_template : create sites-enabled dir] ************************************************************************************
+2023-04-03 01:29:30,450 p=25515 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:29:30,451 p=25515 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:29:30,466 p=25515 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:29:31,737 p=25515 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:29:31,831 p=25515 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:29:31,848 p=25515 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:29:33,077 p=25515 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:29:33,247 p=25515 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:29:33,265 p=25515 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 01:29:36,118 p=25515 u=arthur n=ansible | ERROR! The requested handler 'Restart Nginx' was not found in either the main handlers list nor in the listening handlers list
+2023-04-03 01:30:27,785 p=25723 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:30:27,802 p=25723 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:30:27,820 p=25723 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:30:33,752 p=25723 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:30:33,934 p=25723 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:30:33,963 p=25723 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:30:35,490 p=25723 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:30:35,637 p=25723 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:30:35,652 p=25723 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:30:36,901 p=25723 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:30:37,039 p=25723 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:30:37,055 p=25723 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:30:40,663 p=25723 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:30:40,812 p=25723 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:30:40,826 p=25723 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:30:44,290 p=25723 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:30:44,666 p=25723 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:30:44,680 p=25723 u=arthur n=ansible | TASK [deploy.site_template : create sites-available dir] **********************************************************************************
+2023-04-03 01:30:45,876 p=25723 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:30:46,057 p=25723 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:30:46,072 p=25723 u=arthur n=ansible | TASK [deploy.site_template : create sites-enabled dir] ************************************************************************************
+2023-04-03 01:30:47,342 p=25723 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:30:47,445 p=25723 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:30:47,459 p=25723 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:30:48,727 p=25723 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:30:48,851 p=25723 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:30:48,865 p=25723 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:30:50,064 p=25723 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:30:50,295 p=25723 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:30:50,309 p=25723 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 01:30:53,201 p=25723 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:30:53,380 p=25723 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:30:53,393 p=25723 u=arthur n=ansible | TASK [deploy.site_template : Enable new site] *********************************************************************************************
+2023-04-03 01:30:54,654 p=25723 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: 'Unsupported parameters for (file) module: remote_src Supported parameters include: _diff_peek, _original_basename, access_time, access_time_format, attributes, follow, force, group, mode, modification_time, modification_time_format, owner, path, recurse, selevel, serole, setype, seuser, src, state, unsafe_writes'
+2023-04-03 01:30:54,755 p=25723 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: 'Unsupported parameters for (file) module: remote_src Supported parameters include: _diff_peek, _original_basename, access_time, access_time_format, attributes, follow, force, group, mode, modification_time, modification_time_format, owner, path, recurse, selevel, serole, setype, seuser, src, state, unsafe_writes'
+2023-04-03 01:30:54,757 p=25723 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 01:30:54,758 p=25723 u=arthur n=ansible | 10.10.10.1                 : ok=10   changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:30:54,758 p=25723 u=arthur n=ansible | 10.10.10.2                 : ok=10   changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:31:54,392 p=25920 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:31:54,409 p=25920 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:31:54,427 p=25920 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:31:54,497 p=25920 u=arthur n=ansible | fatal: [10.10.10.2]: UNREACHABLE! => changed=false 
+  msg: 'Failed to create temporary directory.In some cases, you may have been able to authenticate and did not have permissions on the target directory. Consider changing the remote tmp path in ansible.cfg to a path rooted in "/tmp", for more error information use -vvv. Failed command was: ( umask 77 && mkdir -p "` echo /tmp `"&& mkdir "` echo /tmp/ansible-tmp-1680471114.4749959-25924-8585318111943 `" && echo ansible-tmp-1680471114.4749959-25924-8585318111943="` echo /tmp/ansible-tmp-1680471114.4749959-25924-8585318111943 `" ), exited with result -13'
+  unreachable: true
+2023-04-03 01:31:59,598 p=25920 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:31:59,625 p=25920 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:32:00,959 p=25920 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:32:00,974 p=25920 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:32:02,043 p=25920 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:32:02,057 p=25920 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:32:06,013 p=25920 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:32:06,030 p=25920 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:32:09,176 p=25920 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:32:09,194 p=25920 u=arthur n=ansible | TASK [deploy.site_template : create sites-available dir] **********************************************************************************
+2023-04-03 01:32:10,309 p=25920 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:32:10,323 p=25920 u=arthur n=ansible | TASK [deploy.site_template : create sites-enabled dir] ************************************************************************************
+2023-04-03 01:32:11,428 p=25920 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:32:11,441 p=25920 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:32:12,517 p=25920 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:32:12,530 p=25920 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:32:13,652 p=25920 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:32:13,667 p=25920 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 01:32:16,193 p=25920 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:32:16,209 p=25920 u=arthur n=ansible | TASK [deploy.site_template : Enable new site] *********************************************************************************************
+2023-04-03 01:32:17,298 p=25920 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  gid: 112
+  group: nginx
+  mode: '01274'
+  msg: refusing to convert from file to symlink for /etc/nginx/sites-enabled/default
+  owner: nginx
+  path: /etc/nginx/sites-enabled/default
+  size: 0
+  state: file
+  uid: 108
+2023-04-03 01:32:17,300 p=25920 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 01:32:17,300 p=25920 u=arthur n=ansible | 10.10.10.1                 : ok=10   changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:32:17,300 p=25920 u=arthur n=ansible | 10.10.10.2                 : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:33:32,431 p=26025 u=arthur n=ansible | 10.10.10.2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-04-03 01:33:32,532 p=26025 u=arthur n=ansible | 10.10.10.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-04-03 01:35:26,095 p=26106 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:35:26,114 p=26106 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:35:26,136 p=26106 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:35:34,022 p=26106 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:35:34,369 p=26106 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:35:34,395 p=26106 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:35:35,880 p=26106 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:35:36,057 p=26106 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:35:36,070 p=26106 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:35:37,289 p=26106 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:35:37,475 p=26106 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:35:37,490 p=26106 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:35:41,579 p=26106 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:35:41,970 p=26106 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:35:41,985 p=26106 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:35:45,528 p=26106 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:35:45,837 p=26106 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:35:45,853 p=26106 u=arthur n=ansible | TASK [deploy.site_template : create sites-available dir] **********************************************************************************
+2023-04-03 01:35:47,049 p=26106 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:35:47,263 p=26106 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:35:47,278 p=26106 u=arthur n=ansible | TASK [deploy.site_template : create sites-enabled dir] ************************************************************************************
+2023-04-03 01:35:48,568 p=26106 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:35:48,719 p=26106 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:35:48,735 p=26106 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:35:50,011 p=26106 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:35:50,201 p=26106 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:35:50,222 p=26106 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:35:51,512 p=26106 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:35:51,630 p=26106 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:35:51,648 p=26106 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 01:35:54,329 p=26106 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:35:54,493 p=26106 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:35:54,506 p=26106 u=arthur n=ansible | TASK [deploy.site_template : Enable new site] *********************************************************************************************
+2023-04-03 01:35:55,880 p=26106 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  gid: 112
+  group: nginx
+  mode: '01411'
+  msg: refusing to convert from file to symlink for /etc/nginx/sites-enabled/default
+  owner: nginx
+  path: /etc/nginx/sites-enabled/default
+  size: 0
+  state: file
+  uid: 108
+2023-04-03 01:35:55,994 p=26106 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  gid: 112
+  group: nginx
+  mode: '01411'
+  msg: refusing to convert from file to symlink for /etc/nginx/sites-enabled/default
+  owner: nginx
+  path: /etc/nginx/sites-enabled/default
+  size: 0
+  state: file
+  uid: 108
+2023-04-03 01:35:55,996 p=26106 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 01:35:55,996 p=26106 u=arthur n=ansible | 10.10.10.1                 : ok=10   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:35:55,996 p=26106 u=arthur n=ansible | 10.10.10.2                 : ok=10   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:37:49,733 p=26313 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:37:49,751 p=26313 u=arthur n=ansible | PLAY [myservs] ****************************************************************************************************************************
+2023-04-03 01:37:49,773 p=26313 u=arthur n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2023-04-03 01:37:57,099 p=26313 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:37:57,272 p=26313 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:37:57,297 p=26313 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] ******************************************************************************
+2023-04-03 01:37:58,869 p=26313 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:37:58,983 p=26313 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:37:59,000 p=26313 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ***********************************************************************************
+2023-04-03 01:38:00,264 p=26313 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:38:00,420 p=26313 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:38:00,439 p=26313 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] *************************************************************************************
+2023-04-03 01:38:04,368 p=26313 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:38:04,447 p=26313 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:38:04,468 p=26313 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] ****************************************************************************************
+2023-04-03 01:38:08,092 p=26313 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:38:08,281 p=26313 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:38:08,294 p=26313 u=arthur n=ansible | TASK [deploy.site_template : create sites-available dir] **********************************************************************************
+2023-04-03 01:38:09,529 p=26313 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:38:09,716 p=26313 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:38:09,734 p=26313 u=arthur n=ansible | TASK [deploy.site_template : create sites-enabled dir] ************************************************************************************
+2023-04-03 01:38:10,991 p=26313 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:38:11,162 p=26313 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:38:11,176 p=26313 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:38:12,502 p=26313 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:38:12,684 p=26313 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:38:12,699 p=26313 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] **********************************************************************************
+2023-04-03 01:38:14,008 p=26313 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:38:14,049 p=26313 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:38:14,067 p=26313 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] ****************************************************************************************
+2023-04-03 01:38:16,911 p=26313 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:38:17,054 p=26313 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:38:17,067 p=26313 u=arthur n=ansible | TASK [deploy.site_template : Enable new site] *********************************************************************************************
+2023-04-03 01:38:18,320 p=26313 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:38:18,466 p=26313 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:38:18,479 p=26313 u=arthur n=ansible | RUNNING HANDLER [deploy.site_template : Restart Nginx] ************************************************************************************
+2023-04-03 01:38:21,364 p=26313 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:38:21,515 p=26313 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:38:21,531 p=26313 u=arthur n=ansible | PLAY RECAP ********************************************************************************************************************************
+2023-04-03 01:38:21,531 p=26313 u=arthur n=ansible | 10.10.10.1                 : ok=12   changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:38:21,531 p=26313 u=arthur n=ansible | 10.10.10.2                 : ok=12   changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:44:30,670 p=26584 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-03 01:44:30,697 p=26584 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-03 01:44:30,723 p=26584 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-03 01:44:38,247 p=26584 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:44:38,492 p=26584 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:44:38,518 p=26584 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] *******************************************************************************
+2023-04-03 01:44:40,075 p=26584 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:44:40,239 p=26584 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:44:40,255 p=26584 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ************************************************************************************
+2023-04-03 01:44:41,476 p=26584 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:44:41,690 p=26584 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:44:41,705 p=26584 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] **************************************************************************************
+2023-04-03 01:44:45,603 p=26584 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:44:45,836 p=26584 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:44:45,854 p=26584 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] *****************************************************************************************
+2023-04-03 01:44:49,689 p=26584 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:44:49,758 p=26584 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:44:49,772 p=26584 u=arthur n=ansible | TASK [deploy.site_template : create sites-available dir] ***********************************************************************************
+2023-04-03 01:44:51,048 p=26584 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:44:51,199 p=26584 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:44:51,212 p=26584 u=arthur n=ansible | TASK [deploy.site_template : create sites-enabled dir] *************************************************************************************
+2023-04-03 01:44:52,484 p=26584 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-03 01:44:52,631 p=26584 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-03 01:44:52,647 p=26584 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] ***********************************************************************************
+2023-04-03 01:44:53,912 p=26584 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:44:54,110 p=26584 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:44:54,124 p=26584 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] ***********************************************************************************
+2023-04-03 01:44:55,383 p=26584 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:44:55,628 p=26584 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:44:55,643 p=26584 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] *****************************************************************************************
+2023-04-03 01:44:58,556 p=26584 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:44:58,647 p=26584 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:44:58,663 p=26584 u=arthur n=ansible | TASK [deploy.site_template : Enable new site] **********************************************************************************************
+2023-04-03 01:45:00,019 p=26584 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:45:00,137 p=26584 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:45:00,153 p=26584 u=arthur n=ansible | RUNNING HANDLER [deploy.site_template : Restart Nginx] *************************************************************************************
+2023-04-03 01:45:02,889 p=26584 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-03 01:45:03,124 p=26584 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-03 01:45:03,142 p=26584 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-03 01:45:03,143 p=26584 u=arthur n=ansible | 10.10.10.1                 : ok=12   changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-03 01:45:03,143 p=26584 u=arthur n=ansible | 10.10.10.2                 : ok=12   changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-04 20:10:42,050 p=5242 u=arthur n=ansible | ERROR! A malformed block was encountered while loading post_tasks
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: myservs
+  ^ here
+
+2023-04-04 20:11:54,438 p=5247 u=arthur n=ansible | ERROR! A malformed block was encountered while loading post_tasks
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: myservs
+  ^ here
+
+2023-04-04 20:12:17,968 p=5249 u=arthur n=ansible | ERROR! A malformed block was encountered while loading post_tasks
+
+The error appears to be in '/home/arthur/repos/ansible_GB/playbook/deploy-site-template.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: myservs
+  ^ here
+
+2023-04-04 20:13:14,404 p=5255 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-04 20:13:14,428 p=5255 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-04 20:13:14,456 p=5255 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-04 20:13:24,813 p=5255 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-04 20:13:25,231 p=5255 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-04 20:13:25,254 p=5255 u=arthur n=ansible | TASK [deploy.site_template : preparing site template] **************************************************************************************
+2023-04-04 20:13:25,329 p=5255 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/prepare-template-files.yml for 10.10.10.1, 10.10.10.2
+2023-04-04 20:13:25,354 p=5255 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-04 20:13:25,354 p=5255 u=arthur n=ansible | 10.10.10.1                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-04 20:13:25,354 p=5255 u=arthur n=ansible | 10.10.10.2                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-04 20:16:05,232 p=5294 u=arthur n=ansible | ansible-playbook 2.10.8
+  config file = /home/arthur/repos/ansible_GB/ansible.cfg
+  configured module search path = ['/home/arthur/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0]
+2023-04-04 20:16:05,233 p=5294 u=arthur n=ansible | Using /home/arthur/repos/ansible_GB/ansible.cfg as config file
+2023-04-04 20:16:05,512 p=5294 u=arthur n=ansible | redirecting (type: callback) ansible.builtin.yaml to community.general.yaml
+2023-04-04 20:16:05,599 p=5294 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-04 20:16:05,600 p=5294 u=arthur n=ansible | redirecting (type: callback) ansible.builtin.yaml to community.general.yaml
+2023-04-04 20:16:05,615 p=5294 u=arthur n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2023-04-04 20:16:05,615 p=5294 u=arthur n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2023-04-04 20:16:05,616 p=5294 u=arthur n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2023-04-04 20:16:05,616 p=5294 u=arthur n=ansible | PLAYBOOK: deploy-site-template.yml *********************************************************************************************************
+2023-04-04 20:16:05,616 p=5294 u=arthur n=ansible | 1 plays in playbook/deploy-site-template.yml
+2023-04-04 20:16:05,620 p=5294 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-04 20:16:05,640 p=5294 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-04 20:16:12,630 p=5294 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-04 20:16:12,812 p=5294 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-04 20:16:12,825 p=5294 u=arthur n=ansible | META: ran handlers
+2023-04-04 20:16:12,837 p=5294 u=arthur n=ansible | TASK [deploy.site_template : preparing site template] **************************************************************************************
+2023-04-04 20:16:12,910 p=5294 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/prepare-template-files.yml for 10.10.10.1, 10.10.10.2
+2023-04-04 20:16:12,923 p=5294 u=arthur n=ansible | META: ran handlers
+2023-04-04 20:16:12,934 p=5294 u=arthur n=ansible | META: ran handlers
+2023-04-04 20:16:12,935 p=5294 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-04 20:16:12,935 p=5294 u=arthur n=ansible | 10.10.10.1                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-04 20:16:12,935 p=5294 u=arthur n=ansible | 10.10.10.2                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-04 20:16:38,555 p=5326 u=arthur n=ansible | ansible-playbook 2.10.8
+  config file = /home/arthur/repos/ansible_GB/ansible.cfg
+  configured module search path = ['/home/arthur/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0]
+2023-04-04 20:16:38,555 p=5326 u=arthur n=ansible | Using /home/arthur/repos/ansible_GB/ansible.cfg as config file
+2023-04-04 20:16:38,556 p=5326 u=arthur n=ansible | setting up inventory plugins
+2023-04-04 20:16:38,566 p=5326 u=arthur n=ansible | host_list declined parsing /home/arthur/repos/ansible_GB/inventory/hosts.ini as it did not pass its verify_file() method
+2023-04-04 20:16:38,566 p=5326 u=arthur n=ansible | script declined parsing /home/arthur/repos/ansible_GB/inventory/hosts.ini as it did not pass its verify_file() method
+2023-04-04 20:16:38,567 p=5326 u=arthur n=ansible | auto declined parsing /home/arthur/repos/ansible_GB/inventory/hosts.ini as it did not pass its verify_file() method
+2023-04-04 20:16:38,567 p=5326 u=arthur n=ansible | yaml declined parsing /home/arthur/repos/ansible_GB/inventory/hosts.ini as it did not pass its verify_file() method
+2023-04-04 20:16:38,570 p=5326 u=arthur n=ansible | Parsed /home/arthur/repos/ansible_GB/inventory/hosts.ini inventory source with ini plugin
+2023-04-04 20:16:38,766 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:38,777 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:38,778 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:38,779 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:38,827 p=5326 u=arthur n=ansible | redirecting (type: callback) ansible.builtin.yaml to community.general.yaml
+2023-04-04 20:16:38,912 p=5326 u=arthur n=ansible | Loading collection community.general from /home/arthur/.ansible/collections/ansible_collections/community/general
+2023-04-04 20:16:38,913 p=5326 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-04 20:16:38,914 p=5326 u=arthur n=ansible | redirecting (type: callback) ansible.builtin.yaml to community.general.yaml
+2023-04-04 20:16:38,918 p=5326 u=arthur n=ansible | Loading callback plugin community.general.yaml of type stdout, v2.0 from /home/arthur/.ansible/collections/ansible_collections/community/general/plugins/callback/yaml.py
+2023-04-04 20:16:38,926 p=5326 u=arthur n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2023-04-04 20:16:38,926 p=5326 u=arthur n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2023-04-04 20:16:38,926 p=5326 u=arthur n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2023-04-04 20:16:38,926 p=5326 u=arthur n=ansible | PLAYBOOK: deploy-site-template.yml *********************************************************************************************************
+2023-04-04 20:16:38,927 p=5326 u=arthur n=ansible | 1 plays in playbook/deploy-site-template.yml
+2023-04-04 20:16:38,929 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:38,929 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:38,930 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:38,931 p=5326 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-04 20:16:38,948 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:38,950 p=5326 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-04 20:16:38,965 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:38,993 p=5330 u=arthur n=ansible | <10.10.10.2> ESTABLISH SSH CONNECTION FOR USER: ansible_adm
+2023-04-04 20:16:38,996 p=5330 u=arthur n=ansible | <10.10.10.2> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ansible_adm"' -o ConnectTimeout=10 -o ControlPath=/home/arthur/.ansible/cp/54c7f9a8c9 10.10.10.2 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /tmp `"&& mkdir "` echo /tmp/ansible-tmp-1680624998.9924638-5330-68845729985167 `" && echo ansible-tmp-1680624998.9924638-5330-68845729985167="` echo /tmp/ansible-tmp-1680624998.9924638-5330-68845729985167 `" ) && sleep 0'"'"''
+2023-04-04 20:16:39,012 p=5329 u=arthur n=ansible | <10.10.10.1> ESTABLISH SSH CONNECTION FOR USER: ansible_adm
+2023-04-04 20:16:39,016 p=5329 u=arthur n=ansible | <10.10.10.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ansible_adm"' -o ConnectTimeout=10 -o ControlPath=/home/arthur/.ansible/cp/ad8dd45134 10.10.10.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /tmp `"&& mkdir "` echo /tmp/ansible-tmp-1680624999.0029573-5329-26066585480225 `" && echo ansible-tmp-1680624999.0029573-5329-26066585480225="` echo /tmp/ansible-tmp-1680624999.0029573-5329-26066585480225 `" ) && sleep 0'"'"''
+2023-04-04 20:16:39,133 p=5329 u=arthur n=ansible | <10.10.10.1> (0, b'ansible-tmp-1680624999.0029573-5329-26066585480225=/tmp/ansible-tmp-1680624999.0029573-5329-26066585480225\n', b"OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 10.10.10.1 is address\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts' -> '/home/arthur/.ssh/known_hosts'\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts2' -> '/home/arthur/.ssh/known_hosts2'\r\ndebug1: auto-mux: Trying existing master\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug2: mux_client_hello_exchange: master version 4\r\ndebug3: mux_client_forwards: request forwardings: 0 local, 0 remote\r\ndebug3: mux_client_request_session: entering\r\ndebug3: mux_client_request_alive: entering\r\ndebug3: mux_client_request_alive: done pid = 5308\r\ndebug3: mux_client_request_session: session request sent\r\ndebug1: mux_client_request_session: master session id: 2\r\ndebug3: mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit status from master 0\r\n")
+2023-04-04 20:16:39,153 p=5330 u=arthur n=ansible | <10.10.10.2> (0, b'ansible-tmp-1680624998.9924638-5330-68845729985167=/tmp/ansible-tmp-1680624998.9924638-5330-68845729985167\n', b"OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 10.10.10.2 is address\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts' -> '/home/arthur/.ssh/known_hosts'\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts2' -> '/home/arthur/.ssh/known_hosts2'\r\ndebug1: auto-mux: Trying existing master\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug2: mux_client_hello_exchange: master version 4\r\ndebug3: mux_client_forwards: request forwardings: 0 local, 0 remote\r\ndebug3: mux_client_request_session: entering\r\ndebug3: mux_client_request_alive: entering\r\ndebug3: mux_client_request_alive: done pid = 5305\r\ndebug3: mux_client_request_session: session request sent\r\ndebug1: mux_client_request_session: master session id: 2\r\ndebug3: mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit status from master 0\r\n")
+2023-04-04 20:16:39,660 p=5329 u=arthur n=ansible | Using module file /usr/lib/python3/dist-packages/ansible/modules/setup.py
+2023-04-04 20:16:39,661 p=5330 u=arthur n=ansible | Using module file /usr/lib/python3/dist-packages/ansible/modules/setup.py
+2023-04-04 20:16:39,662 p=5329 u=arthur n=ansible | <10.10.10.1> PUT /home/arthur/.ansible/tmp/ansible-local-5326a65q6a5a/tmpsjcq23mk TO /tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/AnsiballZ_setup.py
+2023-04-04 20:16:39,663 p=5330 u=arthur n=ansible | <10.10.10.2> PUT /home/arthur/.ansible/tmp/ansible-local-5326a65q6a5a/tmp6hkmruza TO /tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/AnsiballZ_setup.py
+2023-04-04 20:16:39,664 p=5330 u=arthur n=ansible | <10.10.10.2> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ansible_adm"' -o ConnectTimeout=10 -o ControlPath=/home/arthur/.ansible/cp/54c7f9a8c9 '[10.10.10.2]'
+2023-04-04 20:16:39,666 p=5329 u=arthur n=ansible | <10.10.10.1> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ansible_adm"' -o ConnectTimeout=10 -o ControlPath=/home/arthur/.ansible/cp/ad8dd45134 '[10.10.10.1]'
+2023-04-04 20:16:39,878 p=5330 u=arthur n=ansible | <10.10.10.2> (0, b'sftp> put /home/arthur/.ansible/tmp/ansible-local-5326a65q6a5a/tmp6hkmruza /tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/AnsiballZ_setup.py\n', b'OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 10.10.10.2 is address\r\ndebug3: expanded UserKnownHostsFile \'~/.ssh/known_hosts\' -> \'/home/arthur/.ssh/known_hosts\'\r\ndebug3: expanded UserKnownHostsFile \'~/.ssh/known_hosts2\' -> \'/home/arthur/.ssh/known_hosts2\'\r\ndebug1: auto-mux: Trying existing master\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug2: mux_client_hello_exchange: master version 4\r\ndebug3: mux_client_forwards: request forwardings: 0 local, 0 remote\r\ndebug3: mux_client_request_session: entering\r\ndebug3: mux_client_request_alive: entering\r\ndebug3: mux_client_request_alive: done pid = 5305\r\ndebug3: mux_client_request_session: session request sent\r\ndebug1: mux_client_request_session: master session id: 2\r\ndebug2: Remote version: 3\r\ndebug2: Server supports extension "posix-rename@openssh.com" revision 1\r\ndebug2: Server supports extension "statvfs@openssh.com" revision 2\r\ndebug2: Server supports extension "fstatvfs@openssh.com" revision 2\r\ndebug2: Server supports extension "hardlink@openssh.com" revision 1\r\ndebug2: Server supports extension "fsync@openssh.com" revision 1\r\ndebug2: Server supports extension "lsetstat@openssh.com" revision 1\r\ndebug2: Server supports extension "limits@openssh.com" revision 1\r\ndebug2: Server supports extension "expand-path@openssh.com" revision 1\r\ndebug3: Sent message limits@openssh.com I:1\r\ndebug3: Received limits reply T:201 I:1\r\ndebug1: Using server download size 261120\r\ndebug1: Using server upload size 261120\r\ndebug1: Server handle limit 1019; using 64\r\ndebug2: Sending SSH2_FXP_REALPATH "."\r\ndebug3: Sent message fd 3 T:16 I:2\r\ndebug3: SSH2_FXP_REALPATH . -> /home/ansible_adm\r\ndebug3: Looking up /home/arthur/.ansible/tmp/ansible-local-5326a65q6a5a/tmp6hkmruza\r\ndebug2: Sending SSH2_FXP_STAT "/tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/AnsiballZ_setup.py"\r\ndebug3: Sent message fd 3 T:17 I:3\r\ndebug1: stat remote: No such file or directory\r\ndebug2: do_upload: upload local "/home/arthur/.ansible/tmp/ansible-local-5326a65q6a5a/tmp6hkmruza" to remote "/tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/AnsiballZ_setup.py"\r\ndebug2: Sending SSH2_FXP_OPEN "/tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/AnsiballZ_setup.py"\r\ndebug3: Sent dest message SSH2_FXP_OPEN I:4 P:/tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/AnsiballZ_setup.py M:0x001a\r\ndebug3: Sent message SSH2_FXP_WRITE I:6 O:0 S:261120\r\ndebug3: SSH2_FXP_STATUS 0\r\ndebug3: In write loop, ack for 6 261120 bytes at 0\r\ndebug3: Sent message SSH2_FXP_WRITE I:7 O:261120 S:6987\r\ndebug3: SSH2_FXP_STATUS 0\r\ndebug3: In write loop, ack for 7 6987 bytes at 261120\r\ndebug3: Sent message SSH2_FXP_CLOSE I:5\r\ndebug3: SSH2_FXP_STATUS 0\r\ndebug3: mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit status from master 0\r\n')
+2023-04-04 20:16:39,879 p=5330 u=arthur n=ansible | <10.10.10.2> ESTABLISH SSH CONNECTION FOR USER: ansible_adm
+2023-04-04 20:16:39,880 p=5330 u=arthur n=ansible | <10.10.10.2> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ansible_adm"' -o ConnectTimeout=10 -o ControlPath=/home/arthur/.ansible/cp/54c7f9a8c9 10.10.10.2 '/bin/sh -c '"'"'chmod u+x /tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/ /tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/AnsiballZ_setup.py && sleep 0'"'"''
+2023-04-04 20:16:39,886 p=5329 u=arthur n=ansible | <10.10.10.1> (0, b'sftp> put /home/arthur/.ansible/tmp/ansible-local-5326a65q6a5a/tmpsjcq23mk /tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/AnsiballZ_setup.py\n', b'OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 10.10.10.1 is address\r\ndebug3: expanded UserKnownHostsFile \'~/.ssh/known_hosts\' -> \'/home/arthur/.ssh/known_hosts\'\r\ndebug3: expanded UserKnownHostsFile \'~/.ssh/known_hosts2\' -> \'/home/arthur/.ssh/known_hosts2\'\r\ndebug1: auto-mux: Trying existing master\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug2: mux_client_hello_exchange: master version 4\r\ndebug3: mux_client_forwards: request forwardings: 0 local, 0 remote\r\ndebug3: mux_client_request_session: entering\r\ndebug3: mux_client_request_alive: entering\r\ndebug3: mux_client_request_alive: done pid = 5308\r\ndebug3: mux_client_request_session: session request sent\r\ndebug1: mux_client_request_session: master session id: 2\r\ndebug2: Remote version: 3\r\ndebug2: Server supports extension "posix-rename@openssh.com" revision 1\r\ndebug2: Server supports extension "statvfs@openssh.com" revision 2\r\ndebug2: Server supports extension "fstatvfs@openssh.com" revision 2\r\ndebug2: Server supports extension "hardlink@openssh.com" revision 1\r\ndebug2: Server supports extension "fsync@openssh.com" revision 1\r\ndebug2: Server supports extension "lsetstat@openssh.com" revision 1\r\ndebug2: Server supports extension "limits@openssh.com" revision 1\r\ndebug2: Server supports extension "expand-path@openssh.com" revision 1\r\ndebug3: Sent message limits@openssh.com I:1\r\ndebug3: Received limits reply T:201 I:1\r\ndebug1: Using server download size 261120\r\ndebug1: Using server upload size 261120\r\ndebug1: Server handle limit 1019; using 64\r\ndebug2: Sending SSH2_FXP_REALPATH "."\r\ndebug3: Sent message fd 3 T:16 I:2\r\ndebug3: SSH2_FXP_REALPATH . -> /home/ansible_adm\r\ndebug3: Looking up /home/arthur/.ansible/tmp/ansible-local-5326a65q6a5a/tmpsjcq23mk\r\ndebug2: Sending SSH2_FXP_STAT "/tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/AnsiballZ_setup.py"\r\ndebug3: Sent message fd 3 T:17 I:3\r\ndebug1: stat remote: No such file or directory\r\ndebug2: do_upload: upload local "/home/arthur/.ansible/tmp/ansible-local-5326a65q6a5a/tmpsjcq23mk" to remote "/tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/AnsiballZ_setup.py"\r\ndebug2: Sending SSH2_FXP_OPEN "/tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/AnsiballZ_setup.py"\r\ndebug3: Sent dest message SSH2_FXP_OPEN I:4 P:/tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/AnsiballZ_setup.py M:0x001a\r\ndebug3: Sent message SSH2_FXP_WRITE I:6 O:0 S:261120\r\ndebug3: SSH2_FXP_STATUS 0\r\ndebug3: In write loop, ack for 6 261120 bytes at 0\r\ndebug3: Sent message SSH2_FXP_WRITE I:7 O:261120 S:6987\r\ndebug3: SSH2_FXP_STATUS 0\r\ndebug3: In write loop, ack for 7 6987 bytes at 261120\r\ndebug3: Sent message SSH2_FXP_CLOSE I:5\r\ndebug3: SSH2_FXP_STATUS 0\r\ndebug3: mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit status from master 0\r\n')
+2023-04-04 20:16:39,886 p=5329 u=arthur n=ansible | <10.10.10.1> ESTABLISH SSH CONNECTION FOR USER: ansible_adm
+2023-04-04 20:16:39,887 p=5329 u=arthur n=ansible | <10.10.10.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ansible_adm"' -o ConnectTimeout=10 -o ControlPath=/home/arthur/.ansible/cp/ad8dd45134 10.10.10.1 '/bin/sh -c '"'"'chmod u+x /tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/ /tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/AnsiballZ_setup.py && sleep 0'"'"''
+2023-04-04 20:16:39,973 p=5329 u=arthur n=ansible | <10.10.10.1> (0, b'', b"OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 10.10.10.1 is address\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts' -> '/home/arthur/.ssh/known_hosts'\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts2' -> '/home/arthur/.ssh/known_hosts2'\r\ndebug1: auto-mux: Trying existing master\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug2: mux_client_hello_exchange: master version 4\r\ndebug3: mux_client_forwards: request forwardings: 0 local, 0 remote\r\ndebug3: mux_client_request_session: entering\r\ndebug3: mux_client_request_alive: entering\r\ndebug3: mux_client_request_alive: done pid = 5308\r\ndebug3: mux_client_request_session: session request sent\r\ndebug1: mux_client_request_session: master session id: 2\r\ndebug3: mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit status from master 0\r\n")
+2023-04-04 20:16:39,974 p=5329 u=arthur n=ansible | <10.10.10.1> ESTABLISH SSH CONNECTION FOR USER: ansible_adm
+2023-04-04 20:16:39,974 p=5329 u=arthur n=ansible | <10.10.10.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ansible_adm"' -o ConnectTimeout=10 -o ControlPath=/home/arthur/.ansible/cp/ad8dd45134 -tt 10.10.10.1 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-apnzwymbhwewxdhzrihzllwndofnrgts ; /usr/bin/python3 /tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/AnsiballZ_setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2023-04-04 20:16:39,979 p=5330 u=arthur n=ansible | <10.10.10.2> (0, b'', b"OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 10.10.10.2 is address\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts' -> '/home/arthur/.ssh/known_hosts'\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts2' -> '/home/arthur/.ssh/known_hosts2'\r\ndebug1: auto-mux: Trying existing master\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug2: mux_client_hello_exchange: master version 4\r\ndebug3: mux_client_forwards: request forwardings: 0 local, 0 remote\r\ndebug3: mux_client_request_session: entering\r\ndebug3: mux_client_request_alive: entering\r\ndebug3: mux_client_request_alive: done pid = 5305\r\ndebug3: mux_client_request_session: session request sent\r\ndebug1: mux_client_request_session: master session id: 2\r\ndebug3: mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit status from master 0\r\n")
+2023-04-04 20:16:39,979 p=5330 u=arthur n=ansible | <10.10.10.2> ESTABLISH SSH CONNECTION FOR USER: ansible_adm
+2023-04-04 20:16:39,980 p=5330 u=arthur n=ansible | <10.10.10.2> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ansible_adm"' -o ConnectTimeout=10 -o ControlPath=/home/arthur/.ansible/cp/54c7f9a8c9 -tt 10.10.10.2 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-dbhuslazkiyrqmaklxxmblrypfyenkvm ; /usr/bin/python3 /tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/AnsiballZ_setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2023-04-04 20:16:40,148 p=5330 u=arthur n=ansible | Escalation succeeded
+2023-04-04 20:16:40,156 p=5329 u=arthur n=ansible | Escalation succeeded
+2023-04-04 20:16:45,086 p=5330 u=arthur n=ansible | <10.10.10.2> (0, b'\r\n\r\n{"ansible_facts": {"ansible_system": "Linux", "ansible_kernel": "5.15.0-69-generic", "ansible_kernel_version": "#76-Ubuntu SMP Fri Mar 17 17:19:29 UTC 2023", "ansible_machine": "x86_64", "ansible_python_version": "3.10.6", "ansible_fqdn": "serv2", "ansible_hostname": "serv2", "ansible_nodename": "serv2", "ansible_domain": "", "ansible_userspace_bits": "64", "ansible_architecture": "x86_64", "ansible_userspace_architecture": "x86_64", "ansible_machine_id": "e11f4016cfda4e358ff8eff0a91f6bc7", "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAKNaPazzvVXTzF4IUxW8dYy4pzVRdpVr1D8uOYxZhTwKbrB9utvFXLdhc8h4tKScTL8dTHqbqIE8zill6jYh4F5jkivxXkhyNialjmEdmaz66oi4A+aLecHZJOlFxchg8WWK/Uwsp1CWoHKu6VsAjIshIjvjCnXyjT2c2Eaei4OrAAAAFQDamRVA5cnL35aEYukT4dhKdoBYKQAAAIBALCYkjg4LmD/2kGv1l2QE/Jeqhrk38YgEm5TNpFUVqwgzSXT+HD50AI9BxYYHjFetryXzRlV2sMlcGm8aH17b2wYOwl3rI2useR6APW8hG0IORJE8GNRGVbvgnxf89wax6Yw6LCJjGNDEQnBRqtBiu6bA/RPHp+XxCSeU8WXchgAAAIBdL9yeQv0SIKb0had3kgmxnEgLrpJKPXEC7rjWOgl4iJ+2FlyXvvVIebz0zQW/2G2zoEamR3nY48/cmeRdT/Hi5lEjVAbhv39EZ0w4PqbrUar/aww0grRRgqbnf4Ve2zfm8aBGAMi+E5itCPCC261hUb+XgMdOtduh+ZMxr0Au7A==", "ansible_ssh_host_key_dsa_public_keytype": "ssh-dss", "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCrbD2H9Q9DKMNgVK2829a1GM+eWy9E1ScLDIziUDG4ZyeKLLbo7a441N57H/nb9zFxvIxtckaEx6SqZTidwUyTAZELUF1HF4ULiVCH+61sykDrJ3aNK3A5wAGrQFIDwALbNXBvYIOb1H3Hydez99bIO+iQsBqnk/WS9tK/fhaOBaUYkU6AFyaM5Np3h0PgNQ3kgV9igLm5+YCzNM9/APcc8y0WsJZDtnxoRfDr0gFMGpZbPrHzCvyMWzG/0MZ5C4vT0cuj8auYK6o0Nin9t5WiCUEp8NE9341P7LwA8r+QkjEPPTWHH5FnyAUsarf6kWU/FXtnJcLfbPY1nwnqXauGniv85M282N37M3BjlNC+5poaN2LP85KzxSijVe3FLFDhvCJkBIBykLoCxnZFdHmvfUZFNOFHHBmfx/ZtDu8To9Qet+cR4zoj1tShk+dFAHF7XoLx/f28+HQDS0fyJMA/0xS097EgxBFcdbgU3o9Z5bUi7a+n1vA+nHHdSla1sz8=", "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa", "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOAMIO8/M+9tO2FZuUQSXzzoFEsQjRVC02iKzbgGUAvAvfWlSvFO+AOFFjDZFx4PA2J1LBA5Pej6elt5xGHI3wE=", "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256", "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIMaeqenR4HydfNzBnW2PNeXL3Z920SrSclV8iBdoohYn", "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519", "ansible_user_id": "root", "ansible_user_uid": 0, "ansible_user_gid": 0, "ansible_user_gecos": "root", "ansible_user_dir": "/root", "ansible_user_shell": "/bin/bash", "ansible_real_user_id": 0, "ansible_effective_user_id": 0, "ansible_real_group_id": 0, "ansible_effective_group_id": 0, "ansible_processor": ["0", "GenuineIntel", "Intel(R) Core(TM)2 Duo CPU     T7800  @ 2.60GHz"], "ansible_processor_count": 1, "ansible_processor_cores": 1, "ansible_processor_threads_per_core": 1, "ansible_processor_vcpus": 1, "ansible_processor_nproc": 1, "ansible_memtotal_mb": 969, "ansible_memfree_mb": 208, "ansible_swaptotal_mb": 1503, "ansible_swapfree_mb": 1503, "ansible_memory_mb": {"real": {"total": 969, "used": 761, "free": 208}, "nocache": {"free": 718, "used": 251}, "swap": {"total": 1503, "free": 1503, "used": 0, "cached": 0}}, "ansible_bios_date": "12/01/2006", "ansible_bios_vendor": "innotek GmbH", "ansible_bios_version": "VirtualBox", "ansible_board_asset_tag": "NA", "ansible_board_name": "VirtualBox", "ansible_board_serial": "0", "ansible_board_vendor": "Oracle Corporation", "ansible_board_version": "1.2", "ansible_chassis_asset_tag": "NA", "ansible_chassis_serial": "NA", "ansible_chassis_vendor": "Oracle Corporation", "ansible_chassis_version": "NA", "ansible_form_factor": "Other", "ansible_product_name": "VirtualBox", "ansible_product_serial": "0", "ansible_product_uuid": "9cb507a3-b9ab-2f4e-9627-960872f2b510", "ansible_product_version": "1.2", "ansible_system_vendor": "innotek GmbH", "ansible_devices": {"loop1": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "113888", "sectorsize": "512", "size": "55.61 MB", "host": "", "holders": []}, "loop6": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "0", "sectorsize": "512", "size": "0.00 Bytes", "host": "", "holders": []}, "loop4": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "102072", "sectorsize": "512", "size": "49.84 MB", "host": "", "holders": []}, "sr0": {"virtual": 1, "links": {"ids": ["ata-VBOX_CD-ROM_VB0-01f003f6"], "uuids": [], "labels": [], "masters": []}, "vendor": "VBOX", "model": "CD-ROM", "sas_address": null, "sas_device_handle": null, "removable": "1", "support_discard": "0", "partitions": {}, "rotational": "1", "scheduler_mode": "mq-deadline", "sectors": "2097151", "sectorsize": "512", "size": "1024.00 MB", "host": "IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)", "holders": []}, "loop2": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "113896", "sectorsize": "512", "size": "55.61 MB", "host": "", "holders": []}, "loop0": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "285536", "sectorsize": "512", "size": "139.42 MB", "host": "", "holders": []}, "dm-0": {"virtual": 1, "links": {"ids": ["dm-name-ubuntu--vg-ubuntu--lv", "dm-uuid-LVM-BgUFgtXUiRFIDd27dMth1Q9JUXxVKm4si5Mgc2TXYZA4Vv4zUi5ljxLJZhzHBrSy"], "uuids": ["2a308737-0af3-4879-a9d8-0cc0b109fc77"], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "serial": "VBbb403325", "removable": "0", "support_discard": "0", "partitions": {}, "rotational": "1", "scheduler_mode": "", "sectors": "17293312", "sectorsize": "512", "size": "8.25 GB", "host": "", "holders": []}, "loop7": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "0", "sectorsize": "512", "size": "0.00 Bytes", "host": "", "holders": []}, "sda": {"virtual": 1, "links": {"ids": ["ata-VBOX_HARDDISK_VBbb403325-5020f9f8", "scsi-0ATA_VBOX_HARDDISK_VBbb403325-5020f9f8", "scsi-1ATA_VBOX_HARDDISK_VBbb403325-5020f9f8", "scsi-SATA_VBOX_HARDDISK_VBbb403325-5020f9f8"], "uuids": [], "labels": [], "masters": []}, "vendor": "ATA", "model": "VBOX HARDDISK", "sas_address": null, "sas_device_handle": null, "serial": "VBbb403325", "removable": "0", "support_discard": "0", "partitions": {"sda2": {"links": {"ids": ["ata-VBOX_HARDDISK_VBbb403325-5020f9f8-part2", "scsi-0ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part2", "scsi-1ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part2", "scsi-SATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part2"], "uuids": ["2f804e7d-8823-4f41-9c01-0b0c9a487cbc"], "labels": [], "masters": []}, "start": "4096", "sectors": "3670016", "sectorsize": 512, "size": "1.75 GB", "uuid": "2f804e7d-8823-4f41-9c01-0b0c9a487cbc", "holders": []}, "sda3": {"links": {"ids": ["ata-VBOX_HARDDISK_VBbb403325-5020f9f8-part3", "lvm-pv-uuid-O6Igpr-IkpZ-RpbH-cVz9-cLeh-mZ7B-ExBtvV", "scsi-0ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part3", "scsi-1ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part3", "scsi-SATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part3"], "uuids": [], "labels": [], "masters": ["dm-0"]}, "start": "3674112", "sectors": "17295360", "sectorsize": 512, "size": "8.25 GB", "uuid": null, "holders": ["ubuntu--vg-ubuntu--lv"]}, "sda1": {"links": {"ids": ["ata-VBOX_HARDDISK_VBbb403325-5020f9f8-part1", "scsi-0ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part1", "scsi-1ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part1", "scsi-SATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part1"], "uuids": [], "labels": [], "masters": []}, "start": "2048", "sectors": "2048", "sectorsize": 512, "size": "1.00 MB", "uuid": null, "holders": []}}, "rotational": "1", "scheduler_mode": "mq-deadline", "sectors": "20971520", "sectorsize": "512", "size": "10.00 GB", "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)", "holders": []}, "loop5": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "0", "sectorsize": "512", "size": "0.00 Bytes", "host": "", "holders": []}, "sr1": {"virtual": 1, "links": {"ids": ["ata-VBOX_CD-ROM_VB2-01700376"], "uuids": [], "labels": [], "masters": []}, "vendor": "VBOX", "model": "CD-ROM", "sas_address": null, "sas_device_handle": null, "removable": "1", "support_discard": "0", "partitions": {}, "rotational": "1", "scheduler_mode": "mq-deadline", "sectors": "2097151", "sectorsize": "512", "size": "1024.00 MB", "host": "IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)", "holders": []}, "loop3": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "102072", "sectorsize": "512", "size": "49.84 MB", "host": "", "holders": []}}, "ansible_device_links": {"ids": {"sda2": ["ata-VBOX_HARDDISK_VBbb403325-5020f9f8-part2", "scsi-0ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part2", "scsi-1ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part2", "scsi-SATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part2"], "dm-0": ["dm-name-ubuntu--vg-ubuntu--lv", "dm-uuid-LVM-BgUFgtXUiRFIDd27dMth1Q9JUXxVKm4si5Mgc2TXYZA4Vv4zUi5ljxLJZhzHBrSy"], "sda1": ["ata-VBOX_HARDDISK_VBbb403325-5020f9f8-part1", "scsi-0ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part1", "scsi-1ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part1", "scsi-SATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part1"], "sda3": ["ata-VBOX_HARDDISK_VBbb403325-5020f9f8-part3", "lvm-pv-uuid-O6Igpr-IkpZ-RpbH-cVz9-cLeh-mZ7B-ExBtvV", "scsi-0ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part3", "scsi-1ATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part3", "scsi-SATA_VBOX_HARDDISK_VBbb403325-5020f9f8-part3"], "sda": ["ata-VBOX_HARDDISK_VBbb403325-5020f9f8", "scsi-0ATA_VBOX_HARDDISK_VBbb403325-5020f9f8", "scsi-1ATA_VBOX_HARDDISK_VBbb403325-5020f9f8", "scsi-SATA_VBOX_HARDDISK_VBbb403325-5020f9f8"], "sr0": ["ata-VBOX_CD-ROM_VB0-01f003f6"], "sr1": ["ata-VBOX_CD-ROM_VB2-01700376"]}, "uuids": {"sda2": ["2f804e7d-8823-4f41-9c01-0b0c9a487cbc"], "dm-0": ["2a308737-0af3-4879-a9d8-0cc0b109fc77"]}, "labels": {}, "masters": {"sda3": ["dm-0"]}}, "ansible_uptime_seconds": 481, "ansible_lvm": {"lvs": {"ubuntu-lv": {"size_g": "8.25", "vg": "ubuntu-vg"}}, "vgs": {"ubuntu-vg": {"size_g": "8.25", "free_g": "0", "num_lvs": "1", "num_pvs": "1"}}, "pvs": {"/dev/sda3": {"size_g": "8.25", "free_g": "0", "vg": "ubuntu-vg"}}}, "ansible_mounts": [{"mount": "/", "device": "/dev/mapper/ubuntu--vg-ubuntu--lv", "fstype": "ext4", "options": "rw,relatime", "size_total": 8610254848, "size_available": 2566684672, "block_size": 4096, "block_total": 2102113, "block_available": 626632, "block_used": 1475481, "inode_total": 540672, "inode_available": 433217, "inode_used": 107455, "uuid": "2a308737-0af3-4879-a9d8-0cc0b109fc77"}, {"mount": "/snap/docker/2746", "device": "/dev/loop0", "fstype": "squashfs", "options": "ro,nodev,relatime,errors=continue", "size_total": 146276352, "size_available": 0, "block_size": 131072, "block_total": 1116, "block_available": 0, "block_used": 1116, "inode_total": 5788, "inode_available": 0, "inode_used": 5788, "uuid": "N/A"}, {"mount": "/snap/core18/2714", "device": "/dev/loop1", "fstype": "squashfs", "options": "ro,nodev,relatime,errors=continue", "size_total": 58327040, "size_available": 0, "block_size": 131072, "block_total": 445, "block_available": 0, "block_used": 445, "inode_total": 10880, "inode_available": 0, "inode_used": 10880, "uuid": "N/A"}, {"mount": "/snap/snapd/18357", "device": "/dev/loop4", "fstype": "squashfs", "options": "ro,nodev,relatime,errors=continue", "size_total": 52297728, "size_available": 0, "block_size": 131072, "block_total": 399, "block_available": 0, "block_used": 399, "inode_total": 496, "inode_available": 0, "inode_used": 496, "uuid": "N/A"}, {"mount": "/snap/snapd/18596", "device": "/dev/loop3", "fstype": "squashfs", "options": "ro,nodev,relatime,errors=continue", "size_total": 52297728, "size_available": 0, "block_size": 131072, "block_total": 399, "block_available": 0, "block_used": 399, "inode_total": 498, "inode_available": 0, "inode_used": 498, "uuid": "N/A"}, {"mount": "/snap/core18/2721", "device": "/dev/loop2", "fstype": "squashfs", "options": "ro,nodev,relatime,errors=continue", "size_total": 58327040, "size_available": 0, "block_size": 131072, "block_total": 445, "block_available": 0, "block_used": 445, "inode_total": 10880, "inode_available": 0, "inode_used": 10880, "uuid": "N/A"}, {"mount": "/boot", "device": "/dev/sda2", "fstype": "ext4", "options": "rw,relatime", "size_total": 1810489344, "size_available": 1435516928, "block_size": 4096, "block_total": 442014, "block_available": 350468, "block_used": 91546, "inode_total": 114688, "inode_available": 114368, "inode_used": 320, "uuid": "2f804e7d-8823-4f41-9c01-0b0c9a487cbc"}], "ansible_apparmor": {"status": "enabled"}, "ansible_distribution": "Ubuntu", "ansible_distribution_release": "jammy", "ansible_distribution_version": "22.04", "ansible_distribution_major_version": "22", "ansible_distribution_file_path": "/etc/os-release", "ansible_distribution_file_variety": "Debian", "ansible_distribution_file_parsed": true, "ansible_os_family": "Debian", "ansible_date_time": {"year": "2023", "month": "04", "weekday": "Tuesday", "weekday_number": "2", "weeknumber": "14", "day": "04", "hour": "16", "minute": "16", "second": "39", "epoch": "1680624999", "date": "2023-04-04", "time": "16:16:39", "iso8601_micro": "2023-04-04T16:16:39.429079Z", "iso8601": "2023-04-04T16:16:39Z", "iso8601_basic": "20230404T161639429079", "iso8601_basic_short": "20230404T161639", "tz": "UTC", "tz_offset": "+0000"}, "ansible_fibre_channel_wwn": [], "ansible_cmdline": {"BOOT_IMAGE": "/vmlinuz-5.15.0-69-generic", "root": "/dev/mapper/ubuntu--vg-ubuntu--lv", "ro": true}, "ansible_proc_cmdline": {"BOOT_IMAGE": "/vmlinuz-5.15.0-69-generic", "root": "/dev/mapper/ubuntu--vg-ubuntu--lv", "ro": true}, "ansible_virtualization_role": "guest", "ansible_virtualization_type": "virtualbox", "ansible_is_chroot": false, "ansible_service_mgr": "systemd", "ansible_system_capabilities_enforced": "False", "ansible_system_capabilities": [], "ansible_selinux": {"status": "Missing selinux Python library"}, "ansible_selinux_python_present": false, "ansible_fips": false, "ansible_lsb": {"id": "Ubuntu", "description": "Ubuntu 22.04.2 LTS", "release": "22.04", "codename": "jammy", "major_release": "22"}, "ansible_interfaces": ["lo", "enp0s8", "enp0s3", "docker0"], "ansible_enp0s3": {"device": "enp0s3", "macaddress": "08:00:27:93:e6:00", "mtu": 1500, "active": true, "module": "e1000", "type": "ether", "pciid": "0000:00:03.0", "speed": 1000, "promisc": false, "ipv4": {"address": "192.168.0.103", "broadcast": "", "netmask": "255.255.255.0", "network": "192.168.0.0"}, "ipv6": [{"address": "fe80::a00:27ff:fe93:e600", "prefix": "64", "scope": "link"}]}, "ansible_lo": {"device": "lo", "mtu": 65536, "active": true, "type": "loopback", "promisc": false, "ipv4": {"address": "127.0.0.1", "broadcast": "", "netmask": "255.0.0.0", "network": "127.0.0.0"}, "ipv6": [{"address": "::1", "prefix": "128", "scope": "host"}]}, "ansible_enp0s8": {"device": "enp0s8", "macaddress": "08:00:27:0b:28:ad", "mtu": 1500, "active": true, "module": "e1000", "type": "ether", "pciid": "0000:00:08.0", "speed": 1000, "promisc": false, "ipv4": {"address": "10.10.10.2", "broadcast": "10.10.10.255", "netmask": "255.255.255.0", "network": "10.10.10.0"}, "ipv6": [{"address": "fe80::a00:27ff:fe0b:28ad", "prefix": "64", "scope": "link"}]}, "ansible_docker0": {"device": "docker0", "macaddress": "02:42:50:2b:64:3b", "mtu": 1500, "active": false, "type": "bridge", "interfaces": [], "id": "8000.0242502b643b", "stp": false, "speed": -1, "promisc": false, "ipv4": {"address": "172.17.0.1", "broadcast": "172.17.255.255", "netmask": "255.255.0.0", "network": "172.17.0.0"}}, "ansible_default_ipv4": {"gateway": "192.168.0.1", "interface": "enp0s3", "address": "192.168.0.103", "broadcast": "", "netmask": "255.255.255.0", "network": "192.168.0.0", "macaddress": "08:00:27:93:e6:00", "mtu": 1500, "type": "ether", "alias": "enp0s3"}, "ansible_default_ipv6": {}, "ansible_all_ipv4_addresses": ["192.168.0.103", "10.10.10.2", "172.17.0.1"], "ansible_all_ipv6_addresses": ["fe80::a00:27ff:fe93:e600", "fe80::a00:27ff:fe0b:28ad"], "ansible_iscsi_iqn": "iqn.2004-10.com.ubuntu:01:4f598a60af82", "ansible_env": {"SUDO_GID": "1002", "MAIL": "/var/mail/root", "LC_TIME": "en_GB.UTF-8", "USER": "root", "HOME": "/root", "LC_MONETARY": "en_GB.UTF-8", "SUDO_UID": "1001", "LOGNAME": "root", "TERM": "xterm-256color", "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", "LC_ADDRESS": "en_GB.UTF-8", "LANG": "C", "LC_TELEPHONE": "en_GB.UTF-8", "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-dbhuslazkiyrqmaklxxmblrypfyenkvm ; /usr/bin/python3 /tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/AnsiballZ_setup.py", "LC_NAME": "en_GB.UTF-8", "SHELL": "/bin/bash", "SUDO_USER": "ansible_adm", "LC_MEASUREMENT": "en_GB.UTF-8", "LC_IDENTIFICATION": "en_GB.UTF-8", "PWD": "/home/ansible_adm", "LC_NUMERIC": "en_GB.UTF-8", "LC_PAPER": "en_GB.UTF-8", "LC_ALL": "C", "LC_MESSAGES": "C"}, "ansible_hostnqn": "", "ansible_python": {"version": {"major": 3, "minor": 10, "micro": 6, "releaselevel": "final", "serial": 0}, "version_info": [3, 10, 6, "final", 0], "executable": "/usr/bin/python3", "has_sslcontext": true, "type": "cpython"}, "ansible_pkg_mgr": "apt", "ansible_local": {}, "ansible_dns": {"nameservers": ["127.0.0.53"], "options": {"edns0": true, "trust-ad": true}, "search": ["."]}, "gather_subset": ["all"], "module_setup": true}, "invocation": {"module_args": {"gather_subset": ["all"], "gather_timeout": 10, "filter": "*", "fact_path": "/etc/ansible/facts.d"}}}\r\n', b"OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 10.10.10.2 is address\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts' -> '/home/arthur/.ssh/known_hosts'\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts2' -> '/home/arthur/.ssh/known_hosts2'\r\ndebug1: auto-mux: Trying existing master\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug2: mux_client_hello_exchange: master version 4\r\ndebug3: mux_client_forwards: request forwardings: 0 local, 0 remote\r\ndebug3: mux_client_request_session: entering\r\ndebug3: mux_client_request_alive: entering\r\ndebug3: mux_client_request_alive: done pid = 5305\r\ndebug3: mux_client_request_session: session request sent\r\ndebug1: mux_client_request_session: master session id: 2\r\ndebug3: mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit status from master 0\r\nShared connection to 10.10.10.2 closed.\r\n")
+2023-04-04 20:16:45,092 p=5330 u=arthur n=ansible | <10.10.10.2> ESTABLISH SSH CONNECTION FOR USER: ansible_adm
+2023-04-04 20:16:45,093 p=5330 u=arthur n=ansible | <10.10.10.2> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ansible_adm"' -o ConnectTimeout=10 -o ControlPath=/home/arthur/.ansible/cp/54c7f9a8c9 10.10.10.2 '/bin/sh -c '"'"'rm -f -r /tmp/ansible-tmp-1680624998.9924638-5330-68845729985167/ > /dev/null 2>&1 && sleep 0'"'"''
+2023-04-04 20:16:45,144 p=5329 u=arthur n=ansible | <10.10.10.1> (0, b'\r\n\r\n{"ansible_facts": {"ansible_apparmor": {"status": "enabled"}, "ansible_distribution": "Ubuntu", "ansible_distribution_release": "jammy", "ansible_distribution_version": "22.04", "ansible_distribution_major_version": "22", "ansible_distribution_file_path": "/etc/os-release", "ansible_distribution_file_variety": "Debian", "ansible_distribution_file_parsed": true, "ansible_os_family": "Debian", "ansible_user_id": "root", "ansible_user_uid": 0, "ansible_user_gid": 0, "ansible_user_gecos": "root", "ansible_user_dir": "/root", "ansible_user_shell": "/bin/bash", "ansible_real_user_id": 0, "ansible_effective_user_id": 0, "ansible_real_group_id": 0, "ansible_effective_group_id": 0, "ansible_system_capabilities_enforced": "False", "ansible_system_capabilities": [], "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAKNaPazzvVXTzF4IUxW8dYy4pzVRdpVr1D8uOYxZhTwKbrB9utvFXLdhc8h4tKScTL8dTHqbqIE8zill6jYh4F5jkivxXkhyNialjmEdmaz66oi4A+aLecHZJOlFxchg8WWK/Uwsp1CWoHKu6VsAjIshIjvjCnXyjT2c2Eaei4OrAAAAFQDamRVA5cnL35aEYukT4dhKdoBYKQAAAIBALCYkjg4LmD/2kGv1l2QE/Jeqhrk38YgEm5TNpFUVqwgzSXT+HD50AI9BxYYHjFetryXzRlV2sMlcGm8aH17b2wYOwl3rI2useR6APW8hG0IORJE8GNRGVbvgnxf89wax6Yw6LCJjGNDEQnBRqtBiu6bA/RPHp+XxCSeU8WXchgAAAIBdL9yeQv0SIKb0had3kgmxnEgLrpJKPXEC7rjWOgl4iJ+2FlyXvvVIebz0zQW/2G2zoEamR3nY48/cmeRdT/Hi5lEjVAbhv39EZ0w4PqbrUar/aww0grRRgqbnf4Ve2zfm8aBGAMi+E5itCPCC261hUb+XgMdOtduh+ZMxr0Au7A==", "ansible_ssh_host_key_dsa_public_keytype": "ssh-dss", "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCrbD2H9Q9DKMNgVK2829a1GM+eWy9E1ScLDIziUDG4ZyeKLLbo7a441N57H/nb9zFxvIxtckaEx6SqZTidwUyTAZELUF1HF4ULiVCH+61sykDrJ3aNK3A5wAGrQFIDwALbNXBvYIOb1H3Hydez99bIO+iQsBqnk/WS9tK/fhaOBaUYkU6AFyaM5Np3h0PgNQ3kgV9igLm5+YCzNM9/APcc8y0WsJZDtnxoRfDr0gFMGpZbPrHzCvyMWzG/0MZ5C4vT0cuj8auYK6o0Nin9t5WiCUEp8NE9341P7LwA8r+QkjEPPTWHH5FnyAUsarf6kWU/FXtnJcLfbPY1nwnqXauGniv85M282N37M3BjlNC+5poaN2LP85KzxSijVe3FLFDhvCJkBIBykLoCxnZFdHmvfUZFNOFHHBmfx/ZtDu8To9Qet+cR4zoj1tShk+dFAHF7XoLx/f28+HQDS0fyJMA/0xS097EgxBFcdbgU3o9Z5bUi7a+n1vA+nHHdSla1sz8=", "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa", "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOAMIO8/M+9tO2FZuUQSXzzoFEsQjRVC02iKzbgGUAvAvfWlSvFO+AOFFjDZFx4PA2J1LBA5Pej6elt5xGHI3wE=", "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256", "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIMaeqenR4HydfNzBnW2PNeXL3Z920SrSclV8iBdoohYn", "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519", "ansible_cmdline": {"BOOT_IMAGE": "/vmlinuz-5.15.0-69-generic", "root": "/dev/mapper/ubuntu--vg-ubuntu--lv", "ro": true}, "ansible_proc_cmdline": {"BOOT_IMAGE": "/vmlinuz-5.15.0-69-generic", "root": "/dev/mapper/ubuntu--vg-ubuntu--lv", "ro": true}, "ansible_iscsi_iqn": "iqn.2004-10.com.ubuntu:01:4f598a60af82", "ansible_dns": {"nameservers": ["127.0.0.53"], "options": {"edns0": true, "trust-ad": true}, "search": ["."]}, "ansible_system": "Linux", "ansible_kernel": "5.15.0-69-generic", "ansible_kernel_version": "#76-Ubuntu SMP Fri Mar 17 17:19:29 UTC 2023", "ansible_machine": "x86_64", "ansible_python_version": "3.10.6", "ansible_fqdn": "serv1", "ansible_hostname": "serv1", "ansible_nodename": "serv1", "ansible_domain": "", "ansible_userspace_bits": "64", "ansible_architecture": "x86_64", "ansible_userspace_architecture": "x86_64", "ansible_machine_id": "e11f4016cfda4e358ff8eff0a91f6bc7", "ansible_selinux_python_present": true, "ansible_selinux": {"status": "disabled"}, "ansible_virtualization_role": "guest", "ansible_virtualization_type": "virtualbox", "ansible_is_chroot": false, "ansible_pkg_mgr": "apt", "ansible_hostnqn": "", "ansible_interfaces": ["enp0s3", "lo", "enp0s8", "docker0"], "ansible_enp0s3": {"device": "enp0s3", "macaddress": "08:00:27:3c:99:c2", "mtu": 1500, "active": true, "module": "e1000", "type": "ether", "pciid": "0000:00:03.0", "speed": 1000, "promisc": false, "ipv4": {"address": "192.168.0.104", "broadcast": "", "netmask": "255.255.255.0", "network": "192.168.0.0"}, "ipv6": [{"address": "fe80::a00:27ff:fe3c:99c2", "prefix": "64", "scope": "link"}]}, "ansible_lo": {"device": "lo", "mtu": 65536, "active": true, "type": "loopback", "promisc": false, "ipv4": {"address": "127.0.0.1", "broadcast": "", "netmask": "255.0.0.0", "network": "127.0.0.0"}, "ipv6": [{"address": "::1", "prefix": "128", "scope": "host"}]}, "ansible_docker0": {"device": "docker0", "macaddress": "02:42:c8:98:03:a7", "mtu": 1500, "active": false, "type": "bridge", "interfaces": [], "id": "8000.0242c89803a7", "stp": false, "speed": -1, "promisc": false, "ipv4": {"address": "172.17.0.1", "broadcast": "172.17.255.255", "netmask": "255.255.0.0", "network": "172.17.0.0"}}, "ansible_enp0s8": {"device": "enp0s8", "macaddress": "08:00:27:33:e9:b4", "mtu": 1500, "active": true, "module": "e1000", "type": "ether", "pciid": "0000:00:08.0", "speed": 1000, "promisc": false, "ipv4": {"address": "10.10.10.1", "broadcast": "10.10.10.255", "netmask": "255.255.255.0", "network": "10.10.10.0"}, "ipv6": [{"address": "fe80::a00:27ff:fe33:e9b4", "prefix": "64", "scope": "link"}]}, "ansible_default_ipv4": {"gateway": "192.168.0.1", "interface": "enp0s3", "address": "192.168.0.104", "broadcast": "", "netmask": "255.255.255.0", "network": "192.168.0.0", "macaddress": "08:00:27:3c:99:c2", "mtu": 1500, "type": "ether", "alias": "enp0s3"}, "ansible_default_ipv6": {}, "ansible_all_ipv4_addresses": ["192.168.0.104", "172.17.0.1", "10.10.10.1"], "ansible_all_ipv6_addresses": ["fe80::a00:27ff:fe3c:99c2", "fe80::a00:27ff:fe33:e9b4"], "ansible_fibre_channel_wwn": [], "ansible_processor": ["0", "GenuineIntel", "Intel(R) Core(TM)2 Duo CPU     T7800  @ 2.60GHz"], "ansible_processor_count": 1, "ansible_processor_cores": 1, "ansible_processor_threads_per_core": 1, "ansible_processor_vcpus": 1, "ansible_processor_nproc": 1, "ansible_memtotal_mb": 969, "ansible_memfree_mb": 199, "ansible_swaptotal_mb": 1503, "ansible_swapfree_mb": 1503, "ansible_memory_mb": {"real": {"total": 969, "used": 770, "free": 199}, "nocache": {"free": 717, "used": 252}, "swap": {"total": 1503, "free": 1503, "used": 0, "cached": 0}}, "ansible_bios_date": "12/01/2006", "ansible_bios_vendor": "innotek GmbH", "ansible_bios_version": "VirtualBox", "ansible_board_asset_tag": "NA", "ansible_board_name": "VirtualBox", "ansible_board_serial": "0", "ansible_board_vendor": "Oracle Corporation", "ansible_board_version": "1.2", "ansible_chassis_asset_tag": "NA", "ansible_chassis_serial": "NA", "ansible_chassis_vendor": "Oracle Corporation", "ansible_chassis_version": "NA", "ansible_form_factor": "Other", "ansible_product_name": "VirtualBox", "ansible_product_serial": "0", "ansible_product_uuid": "e98b4267-c396-df45-9a34-804abcafa9e7", "ansible_product_version": "1.2", "ansible_system_vendor": "innotek GmbH", "ansible_devices": {"loop1": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "102072", "sectorsize": "512", "size": "49.84 MB", "host": "", "holders": []}, "loop6": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "0", "sectorsize": "512", "size": "0.00 Bytes", "host": "", "holders": []}, "loop4": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "102072", "sectorsize": "512", "size": "49.84 MB", "host": "", "holders": []}, "sr0": {"virtual": 1, "links": {"ids": ["ata-VBOX_CD-ROM_VB0-01f003f6"], "uuids": [], "labels": [], "masters": []}, "vendor": "VBOX", "model": "CD-ROM", "sas_address": null, "sas_device_handle": null, "removable": "1", "support_discard": "0", "partitions": {}, "rotational": "1", "scheduler_mode": "mq-deadline", "sectors": "2097151", "sectorsize": "512", "size": "1024.00 MB", "host": "IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)", "holders": []}, "loop2": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "113888", "sectorsize": "512", "size": "55.61 MB", "host": "", "holders": []}, "loop0": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "113896", "sectorsize": "512", "size": "55.61 MB", "host": "", "holders": []}, "dm-0": {"virtual": 1, "links": {"ids": ["dm-name-ubuntu--vg-ubuntu--lv", "dm-uuid-LVM-BgUFgtXUiRFIDd27dMth1Q9JUXxVKm4si5Mgc2TXYZA4Vv4zUi5ljxLJZhzHBrSy"], "uuids": ["2a308737-0af3-4879-a9d8-0cc0b109fc77"], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "serial": "VBcf6bba6e", "removable": "0", "support_discard": "0", "partitions": {}, "rotational": "1", "scheduler_mode": "", "sectors": "17293312", "sectorsize": "512", "size": "8.25 GB", "host": "", "holders": []}, "loop7": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "0", "sectorsize": "512", "size": "0.00 Bytes", "host": "", "holders": []}, "sda": {"virtual": 1, "links": {"ids": ["ata-VBOX_HARDDISK_VBcf6bba6e-4d3840e7", "scsi-0ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7", "scsi-1ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7", "scsi-SATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7"], "uuids": [], "labels": [], "masters": []}, "vendor": "ATA", "model": "VBOX HARDDISK", "sas_address": null, "sas_device_handle": null, "serial": "VBcf6bba6e", "removable": "0", "support_discard": "0", "partitions": {"sda2": {"links": {"ids": ["ata-VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part2", "scsi-0ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part2", "scsi-1ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part2", "scsi-SATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part2"], "uuids": ["2f804e7d-8823-4f41-9c01-0b0c9a487cbc"], "labels": [], "masters": []}, "start": "4096", "sectors": "3670016", "sectorsize": 512, "size": "1.75 GB", "uuid": "2f804e7d-8823-4f41-9c01-0b0c9a487cbc", "holders": []}, "sda3": {"links": {"ids": ["ata-VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part3", "lvm-pv-uuid-O6Igpr-IkpZ-RpbH-cVz9-cLeh-mZ7B-ExBtvV", "scsi-0ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part3", "scsi-1ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part3", "scsi-SATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part3"], "uuids": [], "labels": [], "masters": ["dm-0"]}, "start": "3674112", "sectors": "17295360", "sectorsize": 512, "size": "8.25 GB", "uuid": null, "holders": ["ubuntu--vg-ubuntu--lv"]}, "sda1": {"links": {"ids": ["ata-VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part1", "scsi-0ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part1", "scsi-1ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part1", "scsi-SATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part1"], "uuids": [], "labels": [], "masters": []}, "start": "2048", "sectors": "2048", "sectorsize": 512, "size": "1.00 MB", "uuid": null, "holders": []}}, "rotational": "1", "scheduler_mode": "mq-deadline", "sectors": "20971520", "sectorsize": "512", "size": "10.00 GB", "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)", "holders": []}, "loop5": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "0", "sectorsize": "512", "size": "0.00 Bytes", "host": "", "holders": []}, "sr1": {"virtual": 1, "links": {"ids": ["ata-VBOX_CD-ROM_VB2-01700376"], "uuids": [], "labels": [], "masters": []}, "vendor": "VBOX", "model": "CD-ROM", "sas_address": null, "sas_device_handle": null, "removable": "1", "support_discard": "0", "partitions": {}, "rotational": "1", "scheduler_mode": "mq-deadline", "sectors": "2097151", "sectorsize": "512", "size": "1024.00 MB", "host": "IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)", "holders": []}, "loop3": {"virtual": 1, "links": {"ids": [], "uuids": [], "labels": [], "masters": []}, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": {}, "rotational": "1", "scheduler_mode": "none", "sectors": "285536", "sectorsize": "512", "size": "139.42 MB", "host": "", "holders": []}}, "ansible_device_links": {"ids": {"sda2": ["ata-VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part2", "scsi-0ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part2", "scsi-1ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part2", "scsi-SATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part2"], "dm-0": ["dm-name-ubuntu--vg-ubuntu--lv", "dm-uuid-LVM-BgUFgtXUiRFIDd27dMth1Q9JUXxVKm4si5Mgc2TXYZA4Vv4zUi5ljxLJZhzHBrSy"], "sda1": ["ata-VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part1", "scsi-0ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part1", "scsi-1ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part1", "scsi-SATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part1"], "sda3": ["ata-VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part3", "lvm-pv-uuid-O6Igpr-IkpZ-RpbH-cVz9-cLeh-mZ7B-ExBtvV", "scsi-0ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part3", "scsi-1ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part3", "scsi-SATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7-part3"], "sda": ["ata-VBOX_HARDDISK_VBcf6bba6e-4d3840e7", "scsi-0ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7", "scsi-1ATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7", "scsi-SATA_VBOX_HARDDISK_VBcf6bba6e-4d3840e7"], "sr0": ["ata-VBOX_CD-ROM_VB0-01f003f6"], "sr1": ["ata-VBOX_CD-ROM_VB2-01700376"]}, "uuids": {"sda2": ["2f804e7d-8823-4f41-9c01-0b0c9a487cbc"], "dm-0": ["2a308737-0af3-4879-a9d8-0cc0b109fc77"]}, "labels": {}, "masters": {"sda3": ["dm-0"]}}, "ansible_uptime_seconds": 484, "ansible_lvm": {"lvs": {"ubuntu-lv": {"size_g": "8.25", "vg": "ubuntu-vg"}}, "vgs": {"ubuntu-vg": {"size_g": "8.25", "free_g": "0", "num_lvs": "1", "num_pvs": "1"}}, "pvs": {"/dev/sda3": {"size_g": "8.25", "free_g": "0", "vg": "ubuntu-vg"}}}, "ansible_mounts": [{"mount": "/", "device": "/dev/mapper/ubuntu--vg-ubuntu--lv", "fstype": "ext4", "options": "rw,relatime", "size_total": 8610254848, "size_available": 2074890240, "block_size": 4096, "block_total": 2102113, "block_available": 506565, "block_used": 1595548, "inode_total": 540672, "inode_available": 382369, "inode_used": 158303, "uuid": "2a308737-0af3-4879-a9d8-0cc0b109fc77"}, {"mount": "/snap/core18/2721", "device": "/dev/loop0", "fstype": "squashfs", "options": "ro,nodev,relatime,errors=continue", "size_total": 58327040, "size_available": 0, "block_size": 131072, "block_total": 445, "block_available": 0, "block_used": 445, "inode_total": 10880, "inode_available": 0, "inode_used": 10880, "uuid": "N/A"}, {"mount": "/snap/snapd/18357", "device": "/dev/loop1", "fstype": "squashfs", "options": "ro,nodev,relatime,errors=continue", "size_total": 52297728, "size_available": 0, "block_size": 131072, "block_total": 399, "block_available": 0, "block_used": 399, "inode_total": 496, "inode_available": 0, "inode_used": 496, "uuid": "N/A"}, {"mount": "/snap/docker/2746", "device": "/dev/loop3", "fstype": "squashfs", "options": "ro,nodev,relatime,errors=continue", "size_total": 146276352, "size_available": 0, "block_size": 131072, "block_total": 1116, "block_available": 0, "block_used": 1116, "inode_total": 5788, "inode_available": 0, "inode_used": 5788, "uuid": "N/A"}, {"mount": "/snap/core18/2714", "device": "/dev/loop2", "fstype": "squashfs", "options": "ro,nodev,relatime,errors=continue", "size_total": 58327040, "size_available": 0, "block_size": 131072, "block_total": 445, "block_available": 0, "block_used": 445, "inode_total": 10880, "inode_available": 0, "inode_used": 10880, "uuid": "N/A"}, {"mount": "/snap/snapd/18596", "device": "/dev/loop4", "fstype": "squashfs", "options": "ro,nodev,relatime,errors=continue", "size_total": 52297728, "size_available": 0, "block_size": 131072, "block_total": 399, "block_available": 0, "block_used": 399, "inode_total": 498, "inode_available": 0, "inode_used": 498, "uuid": "N/A"}, {"mount": "/boot", "device": "/dev/sda2", "fstype": "ext4", "options": "rw,relatime", "size_total": 1810489344, "size_available": 1435516928, "block_size": 4096, "block_total": 442014, "block_available": 350468, "block_used": 91546, "inode_total": 114688, "inode_available": 114368, "inode_used": 320, "uuid": "2f804e7d-8823-4f41-9c01-0b0c9a487cbc"}], "ansible_env": {"SUDO_GID": "1002", "MAIL": "/var/mail/root", "LC_TIME": "en_GB.UTF-8", "USER": "root", "HOME": "/root", "LC_MONETARY": "en_GB.UTF-8", "SUDO_UID": "1001", "LOGNAME": "root", "TERM": "xterm-256color", "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", "LC_ADDRESS": "en_GB.UTF-8", "LANG": "C", "LC_TELEPHONE": "en_GB.UTF-8", "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-apnzwymbhwewxdhzrihzllwndofnrgts ; /usr/bin/python3 /tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/AnsiballZ_setup.py", "LC_NAME": "en_GB.UTF-8", "SHELL": "/bin/bash", "SUDO_USER": "ansible_adm", "LC_MEASUREMENT": "en_GB.UTF-8", "LC_IDENTIFICATION": "en_GB.UTF-8", "PWD": "/home/ansible_adm", "LC_NUMERIC": "en_GB.UTF-8", "LC_PAPER": "en_GB.UTF-8", "LC_ALL": "C", "LC_MESSAGES": "C"}, "ansible_local": {}, "ansible_python": {"version": {"major": 3, "minor": 10, "micro": 6, "releaselevel": "final", "serial": 0}, "version_info": [3, 10, 6, "final", 0], "executable": "/usr/bin/python3", "has_sslcontext": true, "type": "cpython"}, "ansible_date_time": {"year": "2023", "month": "04", "weekday": "Tuesday", "weekday_number": "2", "weeknumber": "14", "day": "04", "hour": "16", "minute": "16", "second": "40", "epoch": "1680625000", "date": "2023-04-04", "time": "16:16:40", "iso8601_micro": "2023-04-04T16:16:40.140419Z", "iso8601": "2023-04-04T16:16:40Z", "iso8601_basic": "20230404T161640140419", "iso8601_basic_short": "20230404T161640", "tz": "UTC", "tz_offset": "+0000"}, "ansible_service_mgr": "systemd", "ansible_lsb": {"id": "Ubuntu", "description": "Ubuntu 22.04.2 LTS", "release": "22.04", "codename": "jammy", "major_release": "22"}, "ansible_fips": false, "gather_subset": ["all"], "module_setup": true}, "invocation": {"module_args": {"gather_subset": ["all"], "gather_timeout": 10, "filter": "*", "fact_path": "/etc/ansible/facts.d"}}}\r\n', b"OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 10.10.10.1 is address\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts' -> '/home/arthur/.ssh/known_hosts'\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts2' -> '/home/arthur/.ssh/known_hosts2'\r\ndebug1: auto-mux: Trying existing master\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug2: mux_client_hello_exchange: master version 4\r\ndebug3: mux_client_forwards: request forwardings: 0 local, 0 remote\r\ndebug3: mux_client_request_session: entering\r\ndebug3: mux_client_request_alive: entering\r\ndebug3: mux_client_request_alive: done pid = 5308\r\ndebug3: mux_client_request_session: session request sent\r\ndebug1: mux_client_request_session: master session id: 2\r\ndebug3: mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit status from master 0\r\nShared connection to 10.10.10.1 closed.\r\n")
+2023-04-04 20:16:45,150 p=5329 u=arthur n=ansible | <10.10.10.1> ESTABLISH SSH CONNECTION FOR USER: ansible_adm
+2023-04-04 20:16:45,151 p=5329 u=arthur n=ansible | <10.10.10.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ansible_adm"' -o ConnectTimeout=10 -o ControlPath=/home/arthur/.ansible/cp/ad8dd45134 10.10.10.1 '/bin/sh -c '"'"'rm -f -r /tmp/ansible-tmp-1680624999.0029573-5329-26066585480225/ > /dev/null 2>&1 && sleep 0'"'"''
+2023-04-04 20:16:45,211 p=5330 u=arthur n=ansible | <10.10.10.2> (0, b'', b"OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 10.10.10.2 is address\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts' -> '/home/arthur/.ssh/known_hosts'\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts2' -> '/home/arthur/.ssh/known_hosts2'\r\ndebug1: auto-mux: Trying existing master\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug2: mux_client_hello_exchange: master version 4\r\ndebug3: mux_client_forwards: request forwardings: 0 local, 0 remote\r\ndebug3: mux_client_request_session: entering\r\ndebug3: mux_client_request_alive: entering\r\ndebug3: mux_client_request_alive: done pid = 5305\r\ndebug3: mux_client_request_session: session request sent\r\ndebug1: mux_client_request_session: master session id: 2\r\ndebug3: mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit status from master 0\r\n")
+2023-04-04 20:16:45,231 p=5326 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-04 20:16:45,296 p=5329 u=arthur n=ansible | <10.10.10.1> (0, b'', b"OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 10.10.10.1 is address\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts' -> '/home/arthur/.ssh/known_hosts'\r\ndebug3: expanded UserKnownHostsFile '~/.ssh/known_hosts2' -> '/home/arthur/.ssh/known_hosts2'\r\ndebug1: auto-mux: Trying existing master\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug2: mux_client_hello_exchange: master version 4\r\ndebug3: mux_client_forwards: request forwardings: 0 local, 0 remote\r\ndebug3: mux_client_request_session: entering\r\ndebug3: mux_client_request_alive: entering\r\ndebug3: mux_client_request_alive: done pid = 5308\r\ndebug3: mux_client_request_session: session request sent\r\ndebug1: mux_client_request_session: master session id: 2\r\ndebug3: mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit status from master 0\r\n")
+2023-04-04 20:16:45,315 p=5326 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-04 20:16:45,330 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:45,331 p=5326 u=arthur n=ansible | META: ran handlers
+2023-04-04 20:16:45,346 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:45,347 p=5326 u=arthur n=ansible | TASK [deploy.site_template : preparing site template] **************************************************************************************
+2023-04-04 20:16:45,372 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:45,435 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:45,446 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:45,454 p=5326 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/prepare-template-files.yml for 10.10.10.1, 10.10.10.2
+2023-04-04 20:16:45,455 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:45,469 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:45,470 p=5326 u=arthur n=ansible | META: ran handlers
+2023-04-04 20:16:45,480 p=5326 u=arthur n=ansible | Read vars_file '~/repos/ansible_GB/roles/deploy.site_template/vars/main.yml'
+2023-04-04 20:16:45,481 p=5326 u=arthur n=ansible | META: ran handlers
+2023-04-04 20:16:45,482 p=5326 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-04 20:16:45,483 p=5326 u=arthur n=ansible | 10.10.10.1                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-04 20:16:45,483 p=5326 u=arthur n=ansible | 10.10.10.2                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-04 20:20:17,002 p=5375 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-04 20:20:17,018 p=5375 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-04 20:20:17,037 p=5375 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-04 20:20:23,711 p=5375 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-04 20:20:24,070 p=5375 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-04 20:20:24,094 p=5375 u=arthur n=ansible | TASK [deploy.site_template : preparing site template] **************************************************************************************
+2023-04-04 20:20:24,168 p=5375 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/prepare-template-files.yml for 10.10.10.1, 10.10.10.2
+2023-04-04 20:20:24,193 p=5375 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-04 20:20:24,193 p=5375 u=arthur n=ansible | 10.10.10.1                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-04 20:20:24,194 p=5375 u=arthur n=ansible | 10.10.10.2                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-04 20:21:52,345 p=5410 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-04 20:21:52,361 p=5410 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-04 20:21:52,378 p=5410 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-04 20:21:59,195 p=5410 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-04 20:21:59,206 p=5410 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-04 20:21:59,232 p=5410 u=arthur n=ansible | TASK [deploy.site_template : preparing site template] **************************************************************************************
+2023-04-04 20:21:59,308 p=5410 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/prepare-template-files.yml for 10.10.10.1, 10.10.10.2
+2023-04-04 20:21:59,332 p=5410 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-04 20:21:59,333 p=5410 u=arthur n=ansible | 10.10.10.1                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-04 20:21:59,333 p=5410 u=arthur n=ansible | 10.10.10.2                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-09 13:11:49,832 p=5310 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-09 13:11:49,857 p=5310 u=arthur n=ansible | PLAY [myservs] *****************************************************************
+2023-04-09 13:11:49,883 p=5310 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************
+2023-04-09 13:12:00,732 p=5310 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-09 13:12:01,304 p=5310 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-09 13:12:01,333 p=5310 u=arthur n=ansible | TASK [deploy.site_template : preparing site template] **************************
+2023-04-09 13:12:01,422 p=5310 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/prepare-template-files.yml for 10.10.10.1, 10.10.10.2
+2023-04-09 13:12:01,447 p=5310 u=arthur n=ansible | PLAY RECAP *********************************************************************
+2023-04-09 13:12:01,447 p=5310 u=arthur n=ansible | 10.10.10.1                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-09 13:12:01,447 p=5310 u=arthur n=ansible | 10.10.10.2                 : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-09 13:13:50,419 p=5383 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-09 13:13:50,440 p=5383 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-09 13:13:50,464 p=5383 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-09 13:13:58,053 p=5383 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-09 13:13:58,243 p=5383 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-09 13:13:58,270 p=5383 u=arthur n=ansible | TASK [deploy.site_template : preparing site template] **************************************************************************************
+2023-04-09 13:13:58,360 p=5383 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/prepare-template-files.yml for 10.10.10.1, 10.10.10.2
+2023-04-09 13:13:58,374 p=5383 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] *******************************************************************************
+2023-04-09 13:13:59,814 p=5383 u=arthur n=ansible | fatal: [10.10.10.2]: FAILED! => changed=false 
+  msg: 'Unsupported parameters for (file) module: tags Supported parameters include: _diff_peek, _original_basename, access_time, access_time_format, attributes, follow, force, group, mode, modification_time, modification_time_format, owner, path, recurse, selevel, serole, setype, seuser, src, state, unsafe_writes'
+2023-04-09 13:14:00,063 p=5383 u=arthur n=ansible | fatal: [10.10.10.1]: FAILED! => changed=false 
+  msg: 'Unsupported parameters for (file) module: tags Supported parameters include: _diff_peek, _original_basename, access_time, access_time_format, attributes, follow, force, group, mode, modification_time, modification_time_format, owner, path, recurse, selevel, serole, setype, seuser, src, state, unsafe_writes'
+2023-04-09 13:14:00,065 p=5383 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-09 13:14:00,066 p=5383 u=arthur n=ansible | 10.10.10.1                 : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-09 13:14:00,066 p=5383 u=arthur n=ansible | 10.10.10.2                 : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-09 13:15:48,533 p=5442 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-09 13:15:48,550 p=5442 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-09 13:15:48,571 p=5442 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-09 13:15:55,979 p=5442 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-09 13:15:56,152 p=5442 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-09 13:15:56,176 p=5442 u=arthur n=ansible | TASK [deploy.site_template : preparing site template] **************************************************************************************
+2023-04-09 13:15:56,255 p=5442 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/prepare-template-files.yml for 10.10.10.1, 10.10.10.2
+2023-04-09 13:15:56,269 p=5442 u=arthur n=ansible | TASK [deploy.site_template : create dir for temporary files] *******************************************************************************
+2023-04-09 13:15:57,826 p=5442 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-09 13:15:57,878 p=5442 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-09 13:15:57,902 p=5442 u=arthur n=ansible | TASK [deploy.site_template : create dir for site files] ************************************************************************************
+2023-04-09 13:15:59,136 p=5442 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-09 13:15:59,310 p=5442 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-09 13:15:59,343 p=5442 u=arthur n=ansible | TASK [deploy.site_template : downoload site template] **************************************************************************************
+2023-04-09 13:16:03,208 p=5442 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-09 13:16:03,461 p=5442 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-09 13:16:03,478 p=5442 u=arthur n=ansible | TASK [deploy.site_template : unpack site template] *****************************************************************************************
+2023-04-09 13:16:07,183 p=5442 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-09 13:16:07,383 p=5442 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-09 13:16:07,409 p=5442 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-09 13:16:07,410 p=5442 u=arthur n=ansible | 10.10.10.1                 : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-09 13:16:07,410 p=5442 u=arthur n=ansible | 10.10.10.2                 : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-09 13:17:12,406 p=5553 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-09 13:17:12,422 p=5553 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-09 13:17:12,444 p=5553 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-09 13:17:19,129 p=5553 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-09 13:17:19,260 p=5553 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-09 13:17:19,286 p=5553 u=arthur n=ansible | TASK [deploy.site_template : preparing nginx for static site] ******************************************************************************
+2023-04-09 13:17:19,377 p=5553 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/prepare-nginx.yml for 10.10.10.1, 10.10.10.2
+2023-04-09 13:17:19,391 p=5553 u=arthur n=ansible | TASK [deploy.site_template : create sites-available dir] ***********************************************************************************
+2023-04-09 13:17:20,891 p=5553 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-09 13:17:20,994 p=5553 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-09 13:17:21,008 p=5553 u=arthur n=ansible | TASK [deploy.site_template : create sites-enabled dir] *************************************************************************************
+2023-04-09 13:17:22,218 p=5553 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-09 13:17:22,392 p=5553 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-09 13:17:22,406 p=5553 u=arthur n=ansible | TASK [deploy.site_template : delete site-enabled conf file if exist] ***********************************************************************
+2023-04-09 13:17:23,659 p=5553 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-09 13:17:23,800 p=5553 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-09 13:17:23,814 p=5553 u=arthur n=ansible | TASK [deploy.site_template : create file for nginx conf] ***********************************************************************************
+2023-04-09 13:17:25,078 p=5553 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-09 13:17:25,224 p=5553 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-09 13:17:25,249 p=5553 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-09 13:17:25,249 p=5553 u=arthur n=ansible | 10.10.10.1                 : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-09 13:17:25,250 p=5553 u=arthur n=ansible | 10.10.10.2                 : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-09 13:17:40,283 p=5650 u=arthur n=ansible | [WARNING]: Collection community.general does not support Ansible version 2.10.8
+
+2023-04-09 13:17:40,300 p=5650 u=arthur n=ansible | PLAY [myservs] *****************************************************************************************************************************
+2023-04-09 13:17:40,318 p=5650 u=arthur n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2023-04-09 13:17:46,200 p=5650 u=arthur n=ansible | ok: [10.10.10.2]
+2023-04-09 13:17:46,680 p=5650 u=arthur n=ansible | ok: [10.10.10.1]
+2023-04-09 13:17:46,708 p=5650 u=arthur n=ansible | TASK [deploy.site_template : configure nginx for static site] ******************************************************************************
+2023-04-09 13:17:46,788 p=5650 u=arthur n=ansible | included: /home/arthur/repos/ansible_GB/roles/deploy.site_template/tasks/configure-nginx.yml for 10.10.10.1, 10.10.10.2
+2023-04-09 13:17:46,803 p=5650 u=arthur n=ansible | TASK [deploy.site_template : Apply Nginx template] *****************************************************************************************
+2023-04-09 13:17:50,116 p=5650 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-09 13:17:50,217 p=5650 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-09 13:17:50,232 p=5650 u=arthur n=ansible | TASK [deploy.site_template : Enable new site] **********************************************************************************************
+2023-04-09 13:17:51,720 p=5650 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-09 13:17:51,824 p=5650 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-09 13:17:51,842 p=5650 u=arthur n=ansible | RUNNING HANDLER [deploy.site_template : Restart Nginx] *************************************************************************************
+2023-04-09 13:17:54,471 p=5650 u=arthur n=ansible | changed: [10.10.10.1]
+2023-04-09 13:17:54,807 p=5650 u=arthur n=ansible | changed: [10.10.10.2]
+2023-04-09 13:17:54,827 p=5650 u=arthur n=ansible | PLAY RECAP *********************************************************************************************************************************
+2023-04-09 13:17:54,827 p=5650 u=arthur n=ansible | 10.10.10.1                 : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-09 13:17:54,830 p=5650 u=arthur n=ansible | 10.10.10.2                 : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

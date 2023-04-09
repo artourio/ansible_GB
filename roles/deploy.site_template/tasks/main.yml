@@ -1,0 +1,12 @@
+---
+- name: preparing site template
+  include_tasks: prepare-template-files.yml
+  tags: prepare_files
+  
+- name: preparing nginx for static site
+  include_tasks: prepare-nginx.yml
+  tags: prepare_nginx
+  
+- name: configure nginx for static site
+  include_tasks: configure-nginx.yml
+  tags: configure_nginx

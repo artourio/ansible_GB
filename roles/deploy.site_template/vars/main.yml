@@ -1,0 +1,6 @@
+---
+# vars file for deploy.site_template
+server_name: "{{ ansible_default_ipv4.address }}"
+doc_root: /var/www/template
+app_root: templatemo_521_get_ready
+

@@ -1,0 +1,31 @@
+---
+# tasks file for deploy.site_template
+- name: create dir for temporary files
+  file:
+    path: ~/tmp
+    state: directory
+    mode: "700"
+  tags: prepare_files
+    
+- name: create dir for site files
+  file:
+    path: /var/www/template
+    state: directory
+    mode: "775"
+    owner: nginx
+    group: nginx
+  tags: prepare_files
+    
+- name: downoload site template
+  get_url:
+    url: https://templatemo.com/tm-zip-files-2020/templatemo_521_get_ready.zip
+    dest: ~/tmp
+  tags: prepare_files
+    
+- name: unpack site template
+  unarchive:
+    remote_src: yes
+    src: ~/tmp/templatemo_521_get_ready.zip
+    dest: /var/www/template
+  tags: prepare_files
+
