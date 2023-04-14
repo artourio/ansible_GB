@@ -1,2 +1,24 @@
 ---
 # tasks file for common
+- name: update cache
+  apt:
+    update_cache: yes
+  tags: update
+  
+- name: install vim
+  apt:
+    name: vim
+    state: present
+  tags: vim
+  
+- name: install net tools
+  apt:
+    name: net-tools
+    state: present
+  tags: net-tools
+  
+- name: install tcpdump
+  apt:
+    name: tcpdump
+    state: present
+  tags: tcpdump
