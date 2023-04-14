@@ -1,0 +1,11 @@
+---
+- hosts: myservs
+
+  roles:
+    - ~/repos/ansible_GB/roles/common
+    
+  post_tasks:
+    - name: cleaning apt cache
+      apt:
+        autoclean: yes
+      tags: autoclean
