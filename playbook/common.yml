@@ -1,6 +1,13 @@
 ---
 - hosts: myservs
 
+  pre_tasks:
+    - name: update cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+        upgrade: dist
+      tags: pre_tasks
   roles:
     - ~/repos/ansible_GB/roles/common
     
@@ -8,4 +15,5 @@
     - name: cleaning apt cache
       apt:
         autoclean: yes
-      tags: autoclean
+      tags: post_tasks
+      

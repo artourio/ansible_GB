@@ -1,9 +1,6 @@
 ---
 # tasks file for common
-- name: update cache
-  apt:
-    update_cache: yes
-  tags: update
+
   
 - name: install vim
   apt:
@@ -22,3 +19,21 @@
     name: tcpdump
     state: present
   tags: tcpdump
+  
+- name: install gcc
+  apt:
+    name: gcc
+    state: present
+  tags: guest_addons
+  
+- name: install make
+  apt:
+    name: make
+    state: present
+  tags: guest_addons
+  
+- name: istall perl
+  apt:
+    name: perl
+    state: present
+  tags: guest_addons

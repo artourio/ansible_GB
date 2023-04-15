@@ -1,0 +1,6 @@
+plugin: virtualbox
+running_only: true
+cache: true
+query:
+      logged_in_users: /VirtualBox/GuestInfo/OS/LoggedInUsersList
+
